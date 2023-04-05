@@ -318,19 +318,21 @@
 
 .about-emillie {
     position: relative;
-    padding: 43px 0 0 79px;
 }
 
-.about-emillie__description {
+.about-emillie__image {
     position: absolute;
+    top: -172px;
+    left: 79px;
+}
+.about-emillie__description {
     width: 734px;
-    top: 215px;
-    right: 76px;
-    padding-top: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 30px 50px;
     background-color: #E4E4E4;
     opacity: 0.98;
+    margin-left: auto;
+    margin-top: 215px;
+    margin-right: 77px;
 }
 
 .about-emillie__title {
@@ -354,3 +356,8 @@
     color: #1E1F1B;
     margin-bottom: 35px;
 }
+
+.about-emillie__text:last-child {
+    margin-bottom: 0;
+}
+
