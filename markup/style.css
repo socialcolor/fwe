@@ -486,7 +486,7 @@
 }
 
 .social__link:active {
-    opacity: 1;
+    opacity: .6;
 }
 
 .privacy-plicy-link {
