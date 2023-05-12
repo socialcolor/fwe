@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 import Navigation from './navigation';
-import Logo from './logo';
-import { LogoSize } from '../const';
 
 const HeaderStyled = styled.header`
     width: 100%;
