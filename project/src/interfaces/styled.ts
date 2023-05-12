@@ -1,11 +1,15 @@
 export interface IBaseTheme {
     colors: {
-        green: string,
+        white: string,
+        khaki: string,
+        khakiDark: string,
+        khakiSecondary: string,
         orange: string,
+        orangeLight: string,
         beige: string,
-        lightGreen: string,
-        lightOrange: string,
-        default: string
+        yellow: string,
+        black: string,
+        grey: string
     },
     media: {
         phone: string,

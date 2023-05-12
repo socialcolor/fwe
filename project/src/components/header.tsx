@@ -1,37 +1,59 @@
 import styled from 'styled-components';
-import Nav from './nav';
+import Navigation from './navigation';
+import Logo from './logo';
+import { LogoSize } from '../const';
 
 const HeaderStyled = styled.header`
-  position: relative;
-  width: 100%;
-  height: 763px;
-  margin: auto;
-  display: block;
-  background-blend-mode: multiply;
-  background-color: rgba(63, 72, 44, 0.63);
-  background-image: url('img/background.jpg');
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  z-index: 999;
-
-  &:after {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+    max-height: auto;
+    position: relative;
+    margin: auto;
     display: block;
-    content: '';
-    background-color: rgba(63, 72, 44, 0.78);
-    z-index: -1;
-  }
+    background-color: ${({ theme }) => theme.colors.khaki};
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
   `
-
+const StyledLogo = styled.img`
+  display: block;
+  margin: auto;
+  margin-top: 63px;
+`
+const StyledTitle = styled.h1`
+    width: 991px;
+    margin: auto;
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    text-align: center;
+    line-height: 70px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: ${({ theme }) => theme.colors.white};
+`
+const StyledDescription = styled.p`
+    width: 542px;
+    margin: auto;
+    margin-top: 14px;
+    color: ${({ theme }) => theme.colors.yellow};
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+`
 export default function Header(): JSX.Element {
   return (
     <HeaderStyled>
-        <Nav />
+      <Navigation />
+      <StyledLogo src="./img/logo-large.svg" />
+      <StyledTitle>Онлайн-школа французского языка</StyledTitle>
+      <StyledDescription>Персональные и групповые занятия для взрослых и детей</StyledDescription>
     </HeaderStyled>
   )
 }
