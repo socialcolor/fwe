@@ -9,7 +9,8 @@ export interface IBaseTheme {
         beige: string,
         yellow: string,
         black: string,
-        grey: string
+        grey: string,
+        greyLight: string, 
     },
     media: {
         phone: string,

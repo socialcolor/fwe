@@ -23,11 +23,19 @@ export const enum AppRoute {
 //     name: 'Отзывы',
 //     link: '#reviews',
 //   },
+//   question: {
+//     name: 'Вопросы',
+//     link: '#question',
+//   },
+//   contacts: {
+//     name: 'Контакты',
+//     link: '#contacts',
+//   },
 // }
 
 export const Menu: MenuType = {
   price: {
-    name: 'Тарифы и цены',
+    name: 'Цены',
     link: '#price',
   },
   rules: {
@@ -37,6 +45,10 @@ export const Menu: MenuType = {
   offer: {
     name: 'Оферта',
     link: '#Offer',
+  },  
+  contacts: {
+    name: 'Контакты',
+    link: '#contacts',
   },
 }
 

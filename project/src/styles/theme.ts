@@ -12,6 +12,7 @@ export const baseTheme: IBaseTheme = {
         yellow: '#ECB072',
         black: '#000000',
         grey: '#9F9F9F',
+        greyLight: '#D9D9D9',
     },
     media: {
         phone: '(max-width: 425px)',

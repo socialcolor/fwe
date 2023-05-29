@@ -18,6 +18,10 @@ const StyledWrapper = styled.div`
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+    @media (max-width: 768px) {
+        padding:0;
+        flex-direction: column;
+  }
 `
 const StyledNav = styled.div`
     display: flex;
