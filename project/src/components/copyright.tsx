@@ -2,19 +2,20 @@ import styled from "styled-components";
 
 const StyledCopyright = styled.div`
     background-color: ${({theme}) => theme.colors.black};
-    text-align: center;
     padding: 0;
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
 `
 const StyledText = styled.p`
     color: ${({theme}) => theme.colors.grey};
+    width: 270px;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    margin: 0;
+    margin: auto;
 `
 export default function Copyright(): JSX.Element {
     return (
