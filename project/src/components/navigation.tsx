@@ -69,7 +69,7 @@ const StyledBurger = styled.div`
 
         &.open .bar-top {
           transform: rotate(45deg);
-          transform-origin: 15% 15%;
+          transform-origin: 15% 100%;
         }
 
         &.open .bar-mid {
@@ -78,7 +78,7 @@ const StyledBurger = styled.div`
 
         &.open .bar-bot {
           transform: rotate(-45deg);
-          transform-origin: 15% 95%;
+          transform-origin: 15% 0%;
           margin-bottom: 0;
         }
       }
