@@ -5,8 +5,6 @@ import { DeviceQuery } from '../styles/device-query';
 
 const StyledFooter = styled.footer`
     width: 100%;
-    height: 1000px;
-   
 `
 const StyledWrapper = styled.div`
     position: relative;

@@ -33,6 +33,29 @@ export const enum AppRoute {
 //   },
 // }
 
+// export const MenuFooter: MenuType = {
+//   about: {
+//     name: 'О нас',
+//     link: '#about',
+//   },
+//   price: {
+//     name: 'Тарифы',
+//     link: '#price',
+//   },
+//   teachers: {
+//     name: 'Пробный урок',
+//     link: '#teachers',
+//   },
+//   reviews: {
+//     name: 'Отзывы',
+//     link: '#reviews',
+//   },
+//   contacts: {
+//     name: 'Наши учителя',
+//     link: '#contacts',
+//   },
+// }
+
 export const Menu: MenuType = {
   price: {
     name: 'Цены',
@@ -52,44 +75,21 @@ export const Menu: MenuType = {
   },
 }
 
-// export const MenuFooter: MenuType = {
-//   price: {
-//     name: 'Цены',
-//     link: '#price',
-//   },
-//   rules: {
-//     name: 'Правила',
-//     link: '#rules',
-//   },
-//   offer: {
-//     name: 'Оферта',
-//     link: '#Offer',
-//   },  
-//   contacts: {
-//     name: 'Контакты',
-//     link: '#contacts',
-//   },
-// }
-
 export const MenuFooter: MenuType = {
-  about: {
-    name: 'О нас',
-    link: '#about',
-  },
   price: {
-    name: 'Тарифы',
+    name: 'Цены',
     link: '#price',
   },
-  teachers: {
-    name: 'Пробный урок',
-    link: '#teachers',
+  rules: {
+    name: 'Правила',
+    link: '#rules',
   },
-  reviews: {
-    name: 'Отзывы',
-    link: '#reviews',
-  },
+  offer: {
+    name: 'Оферта',
+    link: '#Offer',
+  },  
   contacts: {
-    name: 'Наши учителя',
+    name: 'Контакты',
     link: '#contacts',
   },
 }
