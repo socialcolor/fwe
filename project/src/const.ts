@@ -52,6 +52,48 @@ export const Menu: MenuType = {
   },
 }
 
+// export const MenuFooter: MenuType = {
+//   price: {
+//     name: 'Цены',
+//     link: '#price',
+//   },
+//   rules: {
+//     name: 'Правила',
+//     link: '#rules',
+//   },
+//   offer: {
+//     name: 'Оферта',
+//     link: '#Offer',
+//   },  
+//   contacts: {
+//     name: 'Контакты',
+//     link: '#contacts',
+//   },
+// }
+
+export const MenuFooter: MenuType = {
+  about: {
+    name: 'О нас',
+    link: '#about',
+  },
+  price: {
+    name: 'Тарифы',
+    link: '#price',
+  },
+  teachers: {
+    name: 'Пробный урок',
+    link: '#teachers',
+  },
+  reviews: {
+    name: 'Отзывы',
+    link: '#reviews',
+  },
+  contacts: {
+    name: 'Наши учителя',
+    link: '#contacts',
+  },
+}
+
 export const enum LogoSize {
   Default = 'default',
   Middle = 'middle',

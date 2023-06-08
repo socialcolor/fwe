@@ -10,7 +10,7 @@ const StyledNvigation = styled.div`
     position: relative;
 
     &::after {
-      position: absolute;
+    position: absolute;
     content: '';
     width: 100%;
     height: 1px;
@@ -20,9 +20,10 @@ const StyledNvigation = styled.div`
   }
   `
 const StyledWrpper = styled.div`
+    position: relative;
     width: 100%;
     max-width: 1440px;
-    min-height: 99px;
+    min-height: auto;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -30,75 +31,73 @@ const StyledWrpper = styled.div`
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
-    padding-top: 18px;
-    padding-left: 70px;
-
-    @media ${DeviceQuery.mobile} {
-    position: relative;
-    min-height: auto;
     padding-top: 13px;
     padding-left: 27px;
     padding-bottom: 12px;
+
+  @media ${DeviceQuery.tablet} {
+    padding-top: 14px;
+    padding-bottom: 17px;
+    padding-left: 62px;
   }
 `
 const StyledBurger = styled.div`
-      display: none;
-      @media ${DeviceQuery.mobile} {
+      display: block;
+      position: absolute;
+      top: 26px;
+      right: 27px;
+      cursor: pointer;
+
+      & .bar-top,
+      & .bar-mid,
+      & .bar-bot {
+        background: ${({theme}) => theme.colors.white};
         display: block;
-        position: absolute;
-        top: 26px;
-        right: 28px;
-        cursor: pointer;
-  
-        & .bar-top,
-        & .bar-mid,
-        & .bar-bot {
-          background: ${({theme}) => theme.colors.white};
-          display: block;
-          transform: rotate(0deg);
-          transition: .5s ease all;
-          border-radius: 8px;
-          width: 33px;
-          height: 2px;
-          margin-bottom: 7px;
-        }
-  
-        & .bar-bot {
-          margin-bottom: 0;
-        }
-
-        &.open .bar-top {
-          transform: rotate(45deg);
-          transform-origin: 15% 100%;
-        }
-
-        &.open .bar-mid {
-          opacity: 0;
-        }
-
-        &.open .bar-bot {
-          transform: rotate(-45deg);
-          transform-origin: 15% 0%;
-          margin-bottom: 0;
-        }
+        transform: rotate(0deg);
+        transition: .5s ease all;
+        border-radius: 8px;
+        width: 33px;
+        height: 2px;
+        margin-bottom: 5px;
       }
 
+      & .bar-bot {
+        margin-bottom: 0;
+      }
+
+      &.open .bar-top {
+        transform: rotate(45deg);
+        transform-origin: 25% 100%;
+      }
+
+      &.open .bar-mid {
+        opacity: 0;
+      }
+
+      &.open .bar-bot {
+        transform: rotate(-45deg);
+        transform-origin: 15% 0%;
+        margin-bottom: 0;
+      }
+
+      @media ${DeviceQuery.tablet} {
+        top: 40px;
+        right: 61px;
+      }
 `
-const StyledLink = styled.a`
-    margin-right: 280px;
-    width: 112px;
-    height: 71px;
-    background-image: url('./img/nav_logo.svg');
+const StyledLogoLink = styled.a`
+    margin: 0;
+    width: 66px;
+    height: 45px;
+    background-image: url('./img/nav_logo-mobile.svg');
     background-size: contain;
     background-repeat: no-repeat;
 
-    @media ${DeviceQuery.mobile} {
-      margin: 0;
-      width: 66px;
-      height: 45px;
-      background-image: url('./img/nav_logo_mobile.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
+      
+  @media ${DeviceQuery.tablet} {
+    width: 112px;
+    height: 71px;
+    background-image: url('./img/nav_logo-tablet.svg');
   }
 `
 
@@ -109,7 +108,7 @@ export default function Navigation(): JSX.Element {
   return (
     <StyledNvigation>
       <StyledWrpper>
-        <StyledLink />
+        <StyledLogoLink />
         <Nav menu={isMenuOpen}/>
         <StyledBurger className={isMenuOpen ? 'open' : ''} onClick={toggleMenuMode}>
           <span className="bar-top"></span>
