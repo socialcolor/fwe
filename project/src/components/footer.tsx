@@ -26,7 +26,7 @@ const StyledWrapper = styled.div`
         padding-bottom: 30px;
     }
     @media ${DeviceQuery.desktop} {
-        width: 1440px;
+        min-width: 1440px;
         padding-left: 540px;
         padding-top: 25px;
         padding-bottom: 100px;
