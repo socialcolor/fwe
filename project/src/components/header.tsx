@@ -20,6 +20,10 @@ const HeaderStyled = styled.header`
     @media ${DeviceQuery.tablet} {
       background-image: url(../img/background-tablet.jpg);
     }
+    @media ${DeviceQuery.desktop} {
+      background-image: url(../img/background-desktop.jpg);
+      
+    }
   `
 const StyledHeaderLogo = styled.div`
   display: block;
@@ -36,7 +40,12 @@ const StyledHeaderLogo = styled.div`
     height: 114px;
     margin-top: 91px;
     background-image: url('./img/header_logo-tablet.svg');
-
+  }
+  @media ${DeviceQuery.desktop} {
+    width: 647px;
+    height: 127px;
+    margin-top: 63px;
+    background-image: url('./img/header_logo-desktop.svg');
   }
 `
 const StyledTitle = styled.h1`
@@ -61,6 +70,14 @@ const StyledTitle = styled.h1`
       line-height: 55px;
       margin-top: 12px;
     }
+    @media ${DeviceQuery.desktop} {
+      width: 1000px;
+      font-weight: 600;
+      font-size: 56px;
+      line-height: 70px;
+      letter-spacing: 0.03em;
+      margin-top: 15px;
+    }
 `
 const StyledDescription = styled.p`
     width: 100%;
@@ -80,6 +97,13 @@ const StyledDescription = styled.p`
       font-size: 30px;
       line-height: 36px;
       margin-top: 10px;
+    }
+    @media ${DeviceQuery.desktop} {
+      width: 542px;
+      padding: 0px;
+      font-size: 30px;
+      line-height: 36px;
+      margin-top: 15px;
     }
 `
 export default function Header(): JSX.Element {

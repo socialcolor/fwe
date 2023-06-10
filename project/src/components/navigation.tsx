@@ -40,50 +40,63 @@ const StyledWrpper = styled.div`
     padding-bottom: 17px;
     padding-left: 62px;
   }
+  @media ${DeviceQuery.desktop} {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 18px;
+    padding-left: 69px;
+    padding-bottom: 10px;
+  }
 `
 const StyledBurger = styled.div`
+    display: block;
+    position: absolute;
+    top: 26px;
+    right: 27px;
+    cursor: pointer;
+
+    & .bar-top,
+    & .bar-mid,
+    & .bar-bot {
+      background: ${({theme}) => theme.colors.white};
       display: block;
-      position: absolute;
-      top: 26px;
-      right: 27px;
-      cursor: pointer;
+      transform: rotate(0deg);
+      transition: .5s ease all;
+      border-radius: 8px;
+      width: 33px;
+      height: 2px;
+      margin-bottom: 5px;
+    }
 
-      & .bar-top,
-      & .bar-mid,
-      & .bar-bot {
-        background: ${({theme}) => theme.colors.white};
-        display: block;
-        transform: rotate(0deg);
-        transition: .5s ease all;
-        border-radius: 8px;
-        width: 33px;
-        height: 2px;
-        margin-bottom: 5px;
-      }
+    & .bar-bot {
+      margin-bottom: 0;
+    }
 
-      & .bar-bot {
-        margin-bottom: 0;
-      }
+    &.open .bar-top {
+      transform: rotate(45deg);
+      transform-origin: 25% 100%;
+    }
 
-      &.open .bar-top {
-        transform: rotate(45deg);
-        transform-origin: 25% 100%;
-      }
+    &.open .bar-mid {
+      opacity: 0;
+    }
 
-      &.open .bar-mid {
-        opacity: 0;
-      }
+    &.open .bar-bot {
+      transform: rotate(-45deg);
+      transform-origin: 15% 0%;
+      margin-bottom: 0;
+    }
 
-      &.open .bar-bot {
-        transform: rotate(-45deg);
-        transform-origin: 15% 0%;
-        margin-bottom: 0;
-      }
-
-      @media ${DeviceQuery.tablet} {
-        top: 40px;
-        right: 61px;
-      }
+    @media ${DeviceQuery.tablet} {
+      top: 40px;
+      right: 61px;
+    }
+    @media ${DeviceQuery.desktop} {
+      display: none;
+    }
 `
 const StyledLogoLink = styled.a`
     margin: 0;
@@ -98,6 +111,11 @@ const StyledLogoLink = styled.a`
     width: 112px;
     height: 71px;
     background-image: url('./img/nav_logo-tablet.svg');
+  }
+
+  @media ${DeviceQuery.desktop} {
+    width: 135px;
+    margin-right: 109px;
   }
 `
 

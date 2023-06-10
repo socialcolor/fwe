@@ -4,7 +4,7 @@ import { SizeDeviceType } from "../type/size-device"
 export const SizeDevice:SizeDeviceType = {
     mobile: 320,
     tablet: 768,
-    desktop: 1920,
+    desktop: 1440,
   }
   
   export const DeviceQuery:DeviceQueryType = {

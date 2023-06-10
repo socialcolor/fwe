@@ -33,13 +33,23 @@ const StyledNav = styled.nav`
     @media ${DeviceQuery.tablet} {
         top: 101px;
     }
-
+    @media ${DeviceQuery.desktop} {
+        display: flex;
+        width: 100%;
+        max-height: initial;
+        padding-top: 23px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: initial;
+        background: none;
+    }
 `
 const StyledNavLink = styled.a`
     width: 100%;
     margin: 0;
     padding: 3px 13px;
-    list-style-type: none;
     text-transform: uppercase;
     color: ${({theme}) => theme.colors.khaki };
     font-family: 'Inter', sans-serif;
@@ -53,24 +63,49 @@ const StyledNavLink = styled.a`
     &:first-child {
         padding-top: 6px;
     }
-
     &:last-child {
         border-bottom: none;
         padding-bottom: 6px;
     }
-    
     &:hover {
     text-decoration: underline;
     }
-
     &:active {
     text-decoration: underline;
     opacity: 0.6;
     }
+
+    @media ${DeviceQuery.desktop} {
+        width: initial;
+        color: ${({theme}) => theme.colors.white };
+        border: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 27px;
+        padding:0;
+        margin-right: 19px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+        &:active {
+            text-decoration: underline;
+            opacity: 0.6;
+        }
+
+        &:first-child {
+            padding: 0;
+        }
+        &:last-child {
+            border-bottom: none;
+            padding: 0;
+            margin-right: 0px
+        }
+    }
  `
 
 export default function Nav({menu}:NavProps): JSX.Element {
-    console.log(menu)
     return (
         <StyledNav className={menu ? 'open' : ''}>
             {Object.values(Menu).map((item) => (

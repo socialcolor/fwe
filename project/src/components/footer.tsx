@@ -11,8 +11,8 @@ const StyledWrapper = styled.div`
     background-color: ${({ theme }) => theme.colors.khakiDark};
     font-family: 'Montserrat', sans-serif;
     width: 100%;
-    padding-top: 17px;
-    padding-bottom: 17px;
+    padding-top: 50px;
+    padding-bottom: 11px;
     padding-left: 50px;
     padding-right: 73px;
     display: flex;
@@ -23,15 +23,26 @@ const StyledWrapper = styled.div`
     @media ${DeviceQuery.tablet} {
         padding-top: 17px;
         padding-left: 102px;
-        padding-bottom: 17px;
+        padding-bottom: 30px;
+    }
+    @media ${DeviceQuery.desktop} {
+        width: 1440px;
+        padding-left: 540px;
+        padding-top: 25px;
+        padding-bottom: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: nowrap;
     }
 `
 const StyledLogo = styled.div`
     position: absolute;
-    width: 83px;
+    width: 84px;
     height: 46px;
-    right: 37px;
-    top: 31px;
+    top: 50px;
+    right: 19px;
     background-image: url(../img/footer_logo-mobile.svg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -40,8 +51,15 @@ const StyledLogo = styled.div`
         width: 192px;
         height: 118px;
         top: 16px;
-        right: 86px;
+        right: 69px;
         background-image: url(../img/footer_logo-tablet.svg);
+    }
+    @media ${DeviceQuery.desktop} {
+        width: 194px;
+        height: 121px;
+        top: 24px;
+        right: initial;
+        left: 112px;
     }
 `
 const StyledNav = styled.div`
@@ -73,7 +91,7 @@ const StyledNavList = styled.div`
     align-content: center;
     padding: 0;
     margin-top: 18px;
-    margin-bottom: 22px;
+    margin-bottom: 11px;
 
     @media ${DeviceQuery.tablet} {
         margin-top: 13px;
@@ -93,6 +111,13 @@ const StyledNavLink = styled.a`
     margin-bottom: 7px;
     text-decoration: none;
 
+    &:hover {
+    text-decoration: underline;
+    }
+    &:active {
+    text-decoration: underline;
+    opacity: 0.6;
+    }
     @media ${DeviceQuery.tablet} {
         font-size: 22px;
         line-height: 27px;
@@ -105,22 +130,32 @@ const StyledContacts = styled.div`
     align-items: flex-start;
     list-style-type: none;
     color: ${({ theme }) => theme.colors.white};
-    gap: 12px;
+
+    @media ${DeviceQuery.desktop} {
+        margin-right: 46px;
+    }
+`
+const StyledContactsCaption = styled(StyledCaption)`
+    margin-bottom: 17px;
+
+    @media ${DeviceQuery.tablet} {
+        margin-bottom: 15px;
+        line-height: 27px;
+    }
 `
 const StyledText = styled.p`
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 27px;
-    letter-spacing: 0.002em;
+    line-height: 23px;
+    letter-spacing: 0.02em;
     max-width: 350px;
     margin: 0;
-    margin-top: 2px;
+    margin-bottom: 6px;
 
     @media ${DeviceQuery.tablet} {
         font-size: 18px;
-        line-height: 27px;
-        letter-spacing: 0.02em;
     }
 `
 
@@ -136,12 +171,11 @@ export default function Footer(): JSX.Element {
                     </StyledNavList>
                 </StyledNav>
                 <StyledContacts>
-                    <StyledCaption>Контакты</StyledCaption>
-                    <StyledText>ИП Тарханян Г.Ш. <br />
-                        ОГРНИП 322774600762101 <br />
-                        ИНН 772084229151 <br />
-                        Юридический адрес: гор. Москва, Шоссе Энтузиастов 100к1
-                    </StyledText>
+                    <StyledContactsCaption>Контакты</StyledContactsCaption>
+                    <StyledText>ИП Тарханян Г.Ш.</StyledText>
+                    <StyledText>ОГРНИП 322774600762101</StyledText>
+                    <StyledText>ИНН 772084229151</StyledText>
+                    <StyledText>Юридический адрес: гор. Москва, Шоссе Энтузиастов 100к1</StyledText>
                 </StyledContacts>
 
             </StyledWrapper>
