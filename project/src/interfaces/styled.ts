@@ -3,6 +3,7 @@ export interface IBaseTheme {
         white: string,
         khaki: string,
         khakiDark: string,
+        khakiLight: string,
         khakiSecondary: string,
         orange: string,
         orangeLight: string,

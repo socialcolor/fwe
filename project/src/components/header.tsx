@@ -11,17 +11,17 @@ const HeaderStyled = styled.header`
     margin: auto;
     padding-bottom: 17px; 
     background-color: ${({ theme }) => theme.colors.khaki};
-    background-image: url(../img/background-mobile.jpg);
+    background-image: url(./img/background-mobile.jpg);
     background-size: cover;
     background-position-y: top;
     background-position-x: 99%;
     background-repeat: no-repeat;
     
     @media ${DeviceQuery.tablet} {
-      background-image: url(../img/background-tablet.jpg);
+      background-image: url(./img/background-tablet.jpg);
     }
     @media ${DeviceQuery.desktop} {
-      background-image: url(../img/background-desktop.jpg);
+      background-image: url(./img/background-desktop.jpg);
       
     }
   `

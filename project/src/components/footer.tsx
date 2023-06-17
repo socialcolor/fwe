@@ -26,7 +26,7 @@ const StyledWrapper = styled.div`
         padding-bottom: 30px;
     }
     @media ${DeviceQuery.desktop} {
-        min-width: 1440px;
+        min-width: 700px;
         padding-left: 540px;
         padding-top: 25px;
         padding-bottom: 100px;
@@ -43,7 +43,7 @@ const StyledLogo = styled.div`
     height: 46px;
     top: 50px;
     right: 19px;
-    background-image: url(../img/footer_logo-mobile.svg);
+    background-image: url(./img/footer_logo-mobile.svg);
     background-size: contain;
     background-repeat: no-repeat;
     
@@ -52,7 +52,7 @@ const StyledLogo = styled.div`
         height: 118px;
         top: 16px;
         right: 69px;
-        background-image: url(../img/footer_logo-tablet.svg);
+        background-image: url(./img/footer_logo-tablet.svg);
     }
     @media ${DeviceQuery.desktop} {
         width: 194px;

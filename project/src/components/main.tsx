@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Title from './title';
+import Prices from './prices';
 
 const StyledMain = styled.main`
     width: 100%;
@@ -10,7 +10,7 @@ const StyledMain = styled.main`
 export default function Main(): JSX.Element {
   return (
     <StyledMain>
-        <Title>В разработке</Title>
+        <Prices />
     </StyledMain>
   )
 }
