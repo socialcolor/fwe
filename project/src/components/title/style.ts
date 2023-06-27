@@ -1,13 +1,7 @@
-import styled from 'styled-components';
-import { DeviceQuery } from '../styles/device-query';
+import styled from "styled-components";
+import { DeviceQuery } from "../../styles/device-query";
 
-type TitleProps = {
-    children: string | JSX.Element | JSX.Element[],
-    as?: React.ElementType,
-}
-
-
-const StyledTitle = styled.h2`
+export const Title = styled.h2`
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -26,11 +20,3 @@ const StyledTitle = styled.h2`
         line-height: 44px;
     }
 `
-
-export default function Title({children, as = 'h2'}:TitleProps): JSX.Element {
-    return (
-    <StyledTitle forwardedAs={as}>
-        {children}
-    </StyledTitle>
-    )
-}

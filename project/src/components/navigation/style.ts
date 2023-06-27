@@ -1,10 +1,7 @@
-import styled from 'styled-components';
-import Nav from './nav';
-import { DeviceQuery } from '../styles/device-query';
-import { useState } from 'react';
+import styled from 'styled-components'
+import { DeviceQuery } from '../../styles/device-query'
 
-
-const StyledNvigation = styled.div`
+export const Nvigation = styled.div`
     width: 100%;
     height: auto;
     position: relative;
@@ -19,7 +16,7 @@ const StyledNvigation = styled.div`
     background-color: ${({ theme }) => theme.colors.white};
   }
   `
-const StyledWrpper = styled.div`
+export const Wrpper = styled.div`
     position: relative;
     width: 100%;
     max-width: 1440px;
@@ -51,7 +48,7 @@ const StyledWrpper = styled.div`
     padding-bottom: 10px;
   }
 `
-const StyledBurger = styled.div`
+export const Burger = styled.div`
     display: block;
     position: absolute;
     top: 26px;
@@ -98,7 +95,7 @@ const StyledBurger = styled.div`
       display: none;
     }
 `
-const StyledLogoLink = styled.a`
+export const LogoLink = styled.a`
     margin: 0;
     width: 66px;
     height: 45px;
@@ -118,22 +115,3 @@ const StyledLogoLink = styled.a`
     margin-right: 109px;
   }
 `
-
-export default function Navigation(): JSX.Element {
-  const [isMenuOpen, toggleMenu] = useState<boolean>(false);
-  const toggleMenuMode = () =>toggleMenu(!isMenuOpen);
-
-  return (
-    <StyledNvigation>
-      <StyledWrpper>
-        <StyledLogoLink />
-        <Nav menu={isMenuOpen}/>
-        <StyledBurger className={isMenuOpen ? 'open' : ''} onClick={toggleMenuMode}>
-          <span className="bar-top"></span>
-          <span className="bar-mid"></span>
-          <span className="bar-bot"></span>
-        </StyledBurger>
-      </StyledWrpper>
-    </StyledNvigation>
-  )
-}

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import browserHistory from './browser-history';
-import HistoryRouter from './components/history-router';
+import HistoryRouter from './components/history-router/history-router';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(

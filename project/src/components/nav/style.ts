@@ -1,13 +1,7 @@
 import styled from "styled-components"
-import { Menu } from '../const';
-import { DeviceQuery } from "../styles/device-query";
+import { DeviceQuery } from "../../styles/device-query"
 
-type NavProps = {
-    menu: boolean;
-  }
-
-
-const StyledNav = styled.nav`
+export const Nav = styled.nav`
     width: 213px;
     position: absolute;
     top: 69px;
@@ -46,7 +40,7 @@ const StyledNav = styled.nav`
         background: none;
     }
 `
-const StyledNavLink = styled.a`
+export const NavLink = styled.a`
     width: 100%;
     margin: 0;
     padding: 3px 13px;
@@ -104,13 +98,3 @@ const StyledNavLink = styled.a`
         }
     }
  `
-
-export default function Nav({menu}:NavProps): JSX.Element {
-    return (
-        <StyledNav className={menu ? 'open' : ''}>
-            {Object.values(Menu).map((item) => (
-                <StyledNavLink key={item.name} href={item.link} >{item.name}</StyledNavLink>
-            ))}
-        </StyledNav>
-    )
-}

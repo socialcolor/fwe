@@ -68,7 +68,7 @@ export const Menu: MenuType = {
   offer: {
     name: 'Оферта',
     link: '#Offer',
-  },  
+  },
   contacts: {
     name: 'Контакты',
     link: '#contacts',
@@ -87,15 +87,50 @@ export const MenuFooter: MenuType = {
   offer: {
     name: 'Оферта',
     link: '#Offer',
-  },  
+  },
   contacts: {
     name: 'Контакты',
     link: '#contacts',
   },
 }
 
-export const enum LogoSize {
-  Default = 'default',
-  Middle = 'middle',
-  Large = 'large'
-}
+export const PriceLists = [
+  {
+    name: 'Индивидуальные уроки',
+    iconUrl: './img/person.svg',
+    tarifs: [{
+      duration: 30,
+      price: 1000,
+    },
+    {
+      duration: 45,
+      price: 1300,
+    },
+    {
+      duration: 60,
+      price: 1800,
+    },
+    ]
+  },
+  {
+    name: 'Групповые уроки',
+    iconUrl: './img/people.svg',
+    tarifs: [
+      {
+        duration: 60,
+        price: 800,
+      },
+    ]
+  },
+  {
+    name: 'Парные уроки',
+    iconUrl: './img/people.svg',
+    tarifs: [
+      {
+        duration: 60,
+        price: 800,
+      },
+    ]
+  },
+]
+

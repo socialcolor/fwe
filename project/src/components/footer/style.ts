@@ -1,12 +1,10 @@
 import styled from 'styled-components';
-import Copyright from './copyright';
-import { MenuFooter } from '../const';
-import { DeviceQuery } from '../styles/device-query';
+import { DeviceQuery } from '../../styles/device-query';
 
-const StyledFooter = styled.footer`
+export const Footer = styled.footer`
     width: 100%;
 `
-const StyledWrapper = styled.div`
+export const Wrapper = styled.div`
     position: relative;
     background-color: ${({ theme }) => theme.colors.khakiDark};
     font-family: 'Montserrat', sans-serif;
@@ -37,7 +35,7 @@ const StyledWrapper = styled.div`
         flex-wrap: nowrap;
     }
 `
-const StyledLogo = styled.div`
+export const Logo = styled.div`
     position: absolute;
     width: 84px;
     height: 46px;
@@ -62,13 +60,13 @@ const StyledLogo = styled.div`
         left: 112px;
     }
 `
-const StyledNav = styled.div`
+export const Nav = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 `
-const StyledCaption = styled.h4`
+export const Caption = styled.h4`
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -82,7 +80,7 @@ const StyledCaption = styled.h4`
         line-height: 27px;
     }
 `
-const StyledNavList = styled.div`
+export const NavList = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -98,7 +96,7 @@ const StyledNavList = styled.div`
         margin-bottom: 32px;
     }
 `
-const StyledNavLink = styled.a`
+export const NavLink = styled.a`
     list-style-type: none;
     text-transform: uppercase;
     color: ${({ theme }) => theme.colors.white};
@@ -123,7 +121,7 @@ const StyledNavLink = styled.a`
         line-height: 27px;
     }
 `
-const StyledContacts = styled.div`
+export const Contacts = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -135,7 +133,7 @@ const StyledContacts = styled.div`
         margin-right: 46px;
     }
 `
-const StyledContactsCaption = styled(StyledCaption)`
+export const ContactsCaption = styled(Caption)`
     margin-bottom: 17px;
 
     @media ${DeviceQuery.tablet} {
@@ -143,7 +141,7 @@ const StyledContactsCaption = styled(StyledCaption)`
         line-height: 27px;
     }
 `
-const StyledText = styled.p`
+export const Text = styled.p`
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-style: normal;
@@ -158,29 +156,3 @@ const StyledText = styled.p`
         font-size: 18px;
     }
 `
-
-export default function Footer(): JSX.Element {
-    return (
-        <StyledFooter>
-            <StyledWrapper>
-                <StyledLogo />
-                <StyledNav>
-                    <StyledCaption>Карта сайта</StyledCaption>
-                    <StyledNavList>
-                        {Object.values(MenuFooter).map((item) => (<StyledNavLink key={item.name} href={item.link} >{item.name}</StyledNavLink>))}
-                    </StyledNavList>
-                </StyledNav>
-                <StyledContacts>
-                    <StyledContactsCaption>Контакты</StyledContactsCaption>
-                    <StyledText>ИП Тарханян Г.Ш.</StyledText>
-                    <StyledText>ОГРНИП 322774600762101</StyledText>
-                    <StyledText>ИНН 772084229151</StyledText>
-                    <StyledText>Юридический адрес: гор. Москва, Шоссе Энтузиастов 100к1</StyledText>
-                </StyledContacts>
-
-            </StyledWrapper>
-
-            <Copyright />
-        </StyledFooter>
-    )
-}

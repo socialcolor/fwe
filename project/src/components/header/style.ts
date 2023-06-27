@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import Navigation from './navigation';
-import { DeviceQuery } from '../styles/device-query';
+import { DeviceQuery } from '../../styles/device-query';
 
-const HeaderStyled = styled.header`
+export const Header = styled.header`
     width: 100%;
     min-height: 100vh;
     max-height: auto;
@@ -25,7 +24,7 @@ const HeaderStyled = styled.header`
       
     }
   `
-const StyledHeaderLogo = styled.div`
+export const HeaderLogo = styled.div`
   display: block;
   width: 301px;
   height: 147px;
@@ -48,7 +47,7 @@ const StyledHeaderLogo = styled.div`
     background-image: url('./img/header_logo-desktop.svg');
   }
 `
-const StyledTitle = styled.h1`
+export const Title = styled.h1`
     width: 100%;
     padding: 0 20px;
     margin: auto;
@@ -79,7 +78,7 @@ const StyledTitle = styled.h1`
       margin-top: 15px;
     }
 `
-const StyledDescription = styled.p`
+export const Description = styled.p`
     width: 100%;
     margin: auto;
     margin-top: 13px;
@@ -106,13 +105,3 @@ const StyledDescription = styled.p`
       margin-top: 15px;
     }
 `
-export default function Header(): JSX.Element {
-  return (
-    <HeaderStyled>
-      <Navigation />
-      <StyledHeaderLogo/>
-      <StyledTitle>Онлайн-школа французского языка</StyledTitle>
-      <StyledDescription>Персональные и групповые занятия для взрослых и детей</StyledDescription>
-    </HeaderStyled>
-  )
-}

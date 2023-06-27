@@ -1,13 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const StyledCopyright = styled.div`
+export const Copyright = styled.div`
     background-color: ${({theme}) => theme.colors.black};
     padding: 0;
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
 `
-const StyledText = styled.p`
+export const Text = styled.p`
     color: ${({theme}) => theme.colors.grey};
     width: 270px;
     font-family: 'Montserrat', sans-serif;
@@ -17,10 +17,3 @@ const StyledText = styled.p`
     line-height: 17px;
     margin: auto;
 `
-export default function Copyright(): JSX.Element {
-    return (
-        <StyledCopyright>
-            <StyledText>Copyright &copy; 2023 French with Emilie</StyledText>
-        </StyledCopyright>
-    )
-}
