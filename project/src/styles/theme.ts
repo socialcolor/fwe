@@ -5,7 +5,7 @@ export const baseTheme: IBaseTheme = {
         white: '#ffffff',
         khaki: '#4B5830',
         khakiDark: '#282C21',
-        khakiLight: 'A7B38E',
+        khakiLight: '#A7B38E',
         khakiSecondary: '#92A173',
         orange: '#FF7542',
         orangeLight: '#F67600',

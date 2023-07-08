@@ -1,28 +1,31 @@
 import styled from 'styled-components';
 import { DeviceQuery } from '../../styles/device-query';
 
-export const Header = styled.header`
+export const Header = styled.header<{$background: boolean;}>`
     width: 100%;
-    min-height: 100vh;
-    max-height: auto;
     position: relative;
     display: block;
     margin: auto;
-    padding-bottom: 17px; 
     background-color: ${({ theme }) => theme.colors.khaki};
-    background-image: url(./img/background-mobile.jpg);
-    background-size: cover;
-    background-position-y: top;
-    background-position-x: 99%;
-    background-repeat: no-repeat;
-    
-    @media ${DeviceQuery.tablet} {
-      background-image: url(./img/background-tablet.jpg);
-    }
-    @media ${DeviceQuery.desktop} {
-      background-image: url(./img/background-desktop.jpg);
-      
-    }
+    ${props => props.$background ? 
+    `
+      min-height: 100vh;
+      max-height: auto;
+      padding-bottom: 17px; 
+      background-image: url(./img/background-mobile.jpg);
+      background-size: cover;
+      background-position-y: top;
+      background-position-x: 99%;
+      background-repeat: no-repeat;
+
+      @media ${DeviceQuery.tablet} {
+        background-image: url(./img/background-tablet.jpg);
+      }
+      @media ${DeviceQuery.desktop} {
+        background-image: url(./img/background-desktop.jpg); 
+      }
+    `
+    : ``};
   `
 export const HeaderLogo = styled.div`
   display: block;

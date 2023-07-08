@@ -7,7 +7,7 @@ type TitleProps = {
 
 export default function Title({children, as = 'h2'}:TitleProps): JSX.Element {
     return (
-    <S.Title forwardedAs={as}>
+    <S.Title as={as}>
         {children}
     </S.Title>
     )

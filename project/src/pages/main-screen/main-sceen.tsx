@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import Main from "../../components/main/main";
+import Prices from "../../components/price/prices";
 
 export default function MainScreen(): JSX.Element {
     useEffect(() => {
@@ -10,7 +11,9 @@ export default function MainScreen(): JSX.Element {
     return (
         <React.Fragment>
             <Header />
-            <Main />
+            <Main>
+                <Prices />
+             </Main>
             <Footer />
         </React.Fragment>
     )

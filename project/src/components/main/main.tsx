@@ -1,10 +1,9 @@
-import Prices from '../price/prices';
 import * as S from './style';
 
-export default function Main(): JSX.Element {
+  export default function Main({children}:{children?: React.ReactNode}): JSX.Element {
   return (
     <S.Main>
-      <Prices />
+      {children}
     </S.Main>
   )
 }

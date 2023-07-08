@@ -1,6 +1,7 @@
 import * as S from './style';
 import Nav from '../nav/nav';
 import { useState } from 'react';
+import { AppRoute } from '../../const';
 
 export default function Navigation(): JSX.Element {
   const [isMenuOpen, toggleMenu] = useState<boolean>(false);
@@ -9,7 +10,7 @@ export default function Navigation(): JSX.Element {
   return (
     <S.Nvigation>
       <S.Wrpper>
-        <S.LogoLink />
+        <S.LogoLink to={AppRoute.Root}/>
         <Nav menu={isMenuOpen}/>
         <S.Burger className={isMenuOpen ? 'open' : ''} onClick={toggleMenuMode}>
           <span className='bar-top'></span>

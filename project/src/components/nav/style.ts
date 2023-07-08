@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { DeviceQuery } from "../../styles/device-query"
+import { Link } from "react-router-dom"
 
 export const Nav = styled.nav`
     width: 213px;
@@ -40,7 +41,7 @@ export const Nav = styled.nav`
         background: none;
     }
 `
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
     width: 100%;
     margin: 0;
     padding: 3px 13px;

@@ -17,8 +17,8 @@ export default function Prices(): JSX.Element {
         <div id={'price'}>
             <Title as='h3'>Наши Тарифы</Title>
             <Swiper
-                modules= {[Navigation, Pagination]}
-                navigation ={window.innerWidth >= 768 ? false : true}
+                modules={[Navigation, Pagination]}
+                navigation={window.innerWidth >= 768 ? false : true}
                 pagination={true}
                 breakpoints={{
                     320: {
@@ -36,7 +36,7 @@ export default function Prices(): JSX.Element {
                         pagination: {
                             el: '.swiper-pagination',
                             type: 'bullets',
-                          },
+                        },
                     }
                 }}
             >

@@ -3,6 +3,8 @@ import { MenuType } from "./type/menu";
 export const enum AppRoute {
   Root = '/',
   NotFoundScreen = '/notfoundscreen',
+  Contract = '/contract',
+  Rules = '/rules',
   Other = '*',
 }
 
@@ -59,38 +61,38 @@ export const enum AppRoute {
 export const Menu: MenuType = {
   price: {
     name: 'Цены',
-    link: '#price',
+    link: `${AppRoute.Root}#price`,
   },
   rules: {
     name: 'Правила',
-    link: '#rules',
+    link: `${AppRoute.Rules}`,
   },
   offer: {
     name: 'Оферта',
-    link: '#Offer',
+    link: AppRoute.Contract,
   },
   contacts: {
     name: 'Контакты',
-    link: '#contacts',
+    link: `{AppRoute.Root}#contacts`,
   },
 }
 
 export const MenuFooter: MenuType = {
   price: {
     name: 'Цены',
-    link: '#price',
+    link: `${AppRoute.Root}#price`,
   },
   rules: {
     name: 'Правила',
-    link: '#rules',
+    link: `${AppRoute.Rules}`,
   },
   offer: {
     name: 'Оферта',
-    link: '#Offer',
+    link: AppRoute.Contract,
   },
   contacts: {
     name: 'Контакты',
-    link: '#contacts',
+    link: `${AppRoute.Root}#contacts`,
   },
 }
 

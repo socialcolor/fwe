@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { DeviceQuery } from '../../styles/device-query'
+import { Link } from 'react-router-dom'
 
 export const Nvigation = styled.div`
     width: 100%;
@@ -95,7 +96,7 @@ export const Burger = styled.div`
       display: none;
     }
 `
-export const LogoLink = styled.a`
+export const LogoLink = styled(Link)`
     margin: 0;
     width: 66px;
     height: 45px;
