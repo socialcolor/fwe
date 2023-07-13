@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { DeviceQuery } from '../../styles/device-query';
+import { Link } from 'react-router-dom';
 
 export const Footer = styled.footer`
     width: 100%;
@@ -96,7 +97,7 @@ export const NavList = styled.div`
         margin-bottom: 32px;
     }
 `
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
     list-style-type: none;
     text-transform: uppercase;
     color: ${({ theme }) => theme.colors.white};

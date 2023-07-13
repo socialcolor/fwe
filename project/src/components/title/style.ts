@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { DeviceQuery } from "../../styles/device-query";
 
 export const Title = styled.h2`

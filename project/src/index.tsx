@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import App from './components/app/App';
 import browserHistory from './browser-history';
 import HistoryRouter from './components/history-router/history-router';
 import reportWebVitals from './reportWebVitals';

@@ -8,7 +8,7 @@ export const Copyright = styled.div`
     text-align: center;
 `
 export const Text = styled.p`
-    color: ${({theme}) => theme.colors.grey};
+    color: ${({theme}) => theme.colors.greyDark};
     width: 270px;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;

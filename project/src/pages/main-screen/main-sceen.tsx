@@ -3,6 +3,8 @@ import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import Main from "../../components/main/main";
 import Prices from "../../components/price/prices";
+import Callback from "../../components/callback/callback";
+import Compare from "../../components/compare/compare";
 
 export default function MainScreen(): JSX.Element {
     useEffect(() => {
@@ -13,6 +15,8 @@ export default function MainScreen(): JSX.Element {
             <Header />
             <Main>
                 <Prices />
+                <Compare />
+                <Callback />
              </Main>
             <Footer />
         </React.Fragment>

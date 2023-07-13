@@ -1,13 +1,13 @@
-import GlobalStyles from './styles/global';
-import { baseTheme } from './styles/theme';
+import GlobalStyles from '../../styles/global';
+import { baseTheme } from '../../styles/theme';
 import React from 'react';
-import MainScreen from './pages/main-screen/main-sceen';
+import MainScreen from '../../pages/main-screen/main-sceen';
 import { ThemeProvider } from 'styled-components';
 import { Route, Routes } from 'react-router-dom';
-import { AppRoute} from './const';
-import NotFoundScreen from './pages/not-found-screen/not-found-screen';
-import Contract from './pages/contract/contract';
-import Rules from './pages/rules/rules';
+import { AppRoute} from '../../const';
+import NotFoundScreen from '../../pages/not-found-screen/not-found-screen';
+import Contract from '../../pages/contract/contract';
+import Rules from '../../pages/rules/rules';
 
 function App(): JSX.Element {
   return (

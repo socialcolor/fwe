@@ -10,7 +10,7 @@ export default function Footer(): JSX.Element {
                 <S.Nav>
                     <S.Caption>Карта сайта</S.Caption>
                     <S.NavList>
-                        {Object.values(MenuFooter).map((item) => (<S.NavLink key={item.name} href={item.link} >{item.name}</S.NavLink>))}
+                        {Object.values(MenuFooter).map((item) => (<S.NavLink key={item.name} to={item.link} >{item.name}</S.NavLink>))}
                     </S.NavList>
                 </S.Nav>
                 <S.Contacts>
