@@ -15,7 +15,7 @@ export const Text = styled.p`
     font-weight: 300;
 `
 export const TitleH1 = styled.h1`
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     font-style: normal;
     text-align: center;
     font-weight: 600;
@@ -32,7 +32,7 @@ export const TitleH1 = styled.h1`
 `
 
 export const TitleH3 = styled.h3`
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     font-style: normal;
     text-align: center;
     font-weight: 500;
@@ -50,7 +50,7 @@ export const TitleH3 = styled.h3`
 
 export const ButtonLink = styled(Link)`
     margin: 15px auto;
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     font-size: 17px;
     font-style: normal;
     font-weight: 400;

@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 
 `
 export const Title = styled.h3`
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     font-style: normal;
     text-align: center;
     font-weight: 600;
@@ -28,7 +28,7 @@ export const Title = styled.h3`
 export const Text = styled.p`
     color: ${props => props.theme.colors.khaki};
     text-align: center;
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     font-size: 15px;
     font-style: normal;
     font-weight: 600;
@@ -38,7 +38,7 @@ export const Text = styled.p`
 export const Table = styled.div`
     position: relative;
     background-color: ${props => props.theme.colors.green};
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     display: flex;
     flex-direction: column;
 `

@@ -55,7 +55,7 @@ export const Title = styled.h1`
     padding: 0 20px;
     margin: auto;
     margin-top: 15px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: ${props => props.theme.fonts.text};
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -87,7 +87,7 @@ export const Description = styled.p`
     margin-top: 13px;
     padding: 0 50px;
     color: ${({ theme }) => theme.colors.yellow};
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     font-style: normal;
     font-weight: 400;
     font-size: 20px;

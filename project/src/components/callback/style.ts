@@ -26,7 +26,7 @@ export const Text = styled.p<{ $color?: string, $weight: number }>`
     margin: auto;
     color: ${props => props.$color ? props.$color : ({ theme }) => theme.colors.black};
     text-align: center;
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     font-size: 15px;
     font-style: normal;
     font-weight: ${props => props.$weight};
@@ -35,7 +35,7 @@ export const Text = styled.p<{ $color?: string, $weight: number }>`
 export const MailLink = styled.a`
     color: ${({ theme }) => theme.colors.black};
     text-align: center;
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
@@ -53,7 +53,7 @@ export const WrappersInput = styled.div`
 `
 
 export const Input = styled.input`
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     width: 292px;
     height: 52px;
     font-size: 20px;
@@ -77,7 +77,7 @@ export const button = styled.button`
     margin-top: 13px;
     padding: 18px 14px;
     color: ${props => props.theme.colors.white};
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     font-size: 17px;
     font-style: normal;
     font-weight: 500;

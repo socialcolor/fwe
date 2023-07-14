@@ -47,7 +47,7 @@ export const NavLink = styled(Link)`
     padding: 3px 13px;
     text-transform: uppercase;
     color: ${({theme}) => theme.colors.khaki };
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -74,7 +74,7 @@ export const NavLink = styled(Link)`
         width: initial;
         color: ${({theme}) => theme.colors.white };
         border: none;
-        font-family: 'Montserrat', sans-serif;
+        font-family: ${props => props.theme.fonts.text};
         font-size: 22px;
         font-weight: 500;
         line-height: 27px;

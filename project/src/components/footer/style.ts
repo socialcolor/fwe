@@ -8,7 +8,7 @@ export const Footer = styled.footer`
 export const Wrapper = styled.div`
     position: relative;
     background-color: ${({ theme }) => theme.colors.khakiDark};
-    font-family: 'Montserrat', sans-serif;
+    font-family: ${props => props.theme.fonts.text};
     width: 100%;
     padding-top: 50px;
     padding-bottom: 11px;
@@ -143,7 +143,7 @@ export const ContactsCaption = styled(Caption)`
     }
 `
 export const Text = styled.p`
-    font-family: 'Montserrat', sans-serif;
+    font-family: ${props => props.theme.fonts.text};
     font-size: 15px;
     font-style: normal;
     font-weight: 400;

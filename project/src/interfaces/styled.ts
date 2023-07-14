@@ -7,6 +7,7 @@ export interface IBaseTheme {
         khakiSecondary: string,
         green: string,
         orange: string,
+        orangeDark: string,
         orangeLight: string,
         beige: string,
         yellow: string,
@@ -16,6 +17,10 @@ export interface IBaseTheme {
         greyDark: string,
         greyLight: string, 
     },
+    fonts: {
+        title: string,
+        text: string,
+    }
     media: {
         phone: string,
         tablet: string

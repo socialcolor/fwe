@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { DeviceQuery } from "../../styles/device-query";
 
 export const Title = styled.h2`
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     font-style: normal;
     text-align: center;
     font-weight: 600;

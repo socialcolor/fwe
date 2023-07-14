@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { DeviceQuery } from '../../styles/device-query'
 
 export const Price = styled.div`
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     width: 277px;
     height: 377px;
     display: flex !important;

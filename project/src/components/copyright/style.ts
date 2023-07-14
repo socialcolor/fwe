@@ -10,7 +10,7 @@ export const Copyright = styled.div`
 export const Text = styled.p`
     color: ${({theme}) => theme.colors.greyDark};
     width: 270px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: ${props => props.theme.fonts.text};
     font-style: normal;
     font-weight: 400;
     font-size: 14px;

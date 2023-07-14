@@ -9,6 +9,7 @@ export const baseTheme: IBaseTheme = {
         khakiSecondary: '#92A173',
         green: '#7B8468',
         orange: '#FF7542',
+        orangeDark: '#BC5D05',
         orangeLight: '#F67600',
         beige: '#E0D3B0',
         yellow: '#ECB072',
@@ -17,6 +18,10 @@ export const baseTheme: IBaseTheme = {
         grey: '#D1D1D1',
         greyDark: '#9F9F9F',
         greyLight: '#D9D9D9',
+    },
+    fonts: {
+        title: 'Inter, sans-serif',
+        text: 'Montserrat, sans-serif',
     },
     media: {
         phone: '(max-width: 425px)',
