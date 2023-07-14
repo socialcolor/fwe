@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { DeviceQuery } from "../../styles/device-query";
 
-export const Wrapper = styled.div`
+export const Compare = styled.section`
     width: 100%;
     height: auto;
 

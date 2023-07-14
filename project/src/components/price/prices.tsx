@@ -14,7 +14,7 @@ export default function Prices(): JSX.Element {
 
 
     return (
-        <div id={'price'}>
+        <section id={'price'}>
             <Title as='h3'>Наши Тарифы</Title>
             <Swiper
                 modules={[Navigation, Pagination]}
@@ -59,6 +59,6 @@ export default function Prices(): JSX.Element {
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </div>
+        </section>
     )
 }

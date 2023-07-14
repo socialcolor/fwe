@@ -2,7 +2,7 @@ import * as S from './style';
 
 export default function Compare(): JSX.Element {
     return (
-        <S.Wrapper>
+        <S.Compare>
             <S.Title>не знаете какой тариф выбрать?</S.Title>
             <S.Text>мы сделали для вас сравнительную табличку</S.Text>
             <S.Table>
@@ -33,6 +33,6 @@ export default function Compare(): JSX.Element {
                     </S.Row>
                 </S.TableWrapper>
             </S.Table>
-        </S.Wrapper>
+        </S.Compare>
     )
 }

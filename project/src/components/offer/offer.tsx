@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import Title from '../title/title';
 import * as S from './styled';
-import { baseTheme } from '../../styles/theme'
+
 export default function Offer(): JSX.Element {
        const textRef = useRef<HTMLParagraphElement>(null);
        const [height, setHeight] = useState(0);
