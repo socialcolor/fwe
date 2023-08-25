@@ -9,6 +9,7 @@ export const Features = styled.section`
 
 export const Title = styled.h3`
     margin: 0;
+    margin-bottom: 31px;
     color: ${props => props.theme.colors.khaki};
     text-align: center;
     font-family: 'Inter', sans-serif;
@@ -20,14 +21,14 @@ export const Title = styled.h3`
     text-transform: uppercase;
 `
 export const Icons = styled.ul`
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     list-style-type: none;
 `
 export const Icon = styled.li`
     width: 256px;
     height: auto;
-    margin: 0;
+    margin: 0 auto;
     margin-bottom: 32px;
     padding: 10px 0;
     display: block;

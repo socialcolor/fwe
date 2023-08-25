@@ -9,6 +9,7 @@ import Offer from '../../components/offer/offer';
 import AboutMe from '../../components/about-me';
 import Features from '../../components/features';
 import Timeline from '../../components/timeline';
+import Platform from '../../components/platform';
 
 export default function MainScreen(): JSX.Element {
     useEffect(() => {
@@ -23,6 +24,7 @@ export default function MainScreen(): JSX.Element {
                 <AboutMe />
                 <Features />
                 <Timeline />
+                <Platform />
                 <Prices />
                 <Compare />
                 <Callback />

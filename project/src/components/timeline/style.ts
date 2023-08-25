@@ -28,6 +28,7 @@ export const TimelineBox = styled.div`
     justify-content: flex-start;
     align-items: stretch;
     padding: 47px 0;
+    padding-bottom: 42px;
 `
 export const TimelineColumnLeft = styled.div`
     position: relative;
