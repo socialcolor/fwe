@@ -7,6 +7,7 @@ import Callback from '../../components/callback/callback';
 import Compare from '../../components/compare/compare';
 import Offer from '../../components/offer/offer';
 import AboutMe from '../../components/about-me';
+import Features from '../../components/features';
 
 export default function MainScreen(): JSX.Element {
     useEffect(() => {
@@ -19,6 +20,7 @@ export default function MainScreen(): JSX.Element {
             <Main>
                 <Offer />
                 <AboutMe />
+                <Features />
                 <Prices />
                 <Compare />
                 <Callback />
