@@ -81,7 +81,7 @@ export const MoreButton = styled.button<{ $show: number }>`
 `
 export const Achievements = styled.ul`
     margin: auto;
-    padding: 39px 0 23px 0;
+    padding: 39px 0 0 0;
     background-color: ${props => props.theme.colors.white};
     list-style-type: none;
     font-family: ${props => props.theme.fonts.title};
@@ -90,6 +90,9 @@ export const AchievementsItem = styled.li`
     display: block;
     margin-bottom: 15px; 
 
+    &:last-child {
+        margin-bottom: 0;
+    }
 `
 export const AchievementsNumber = styled.p`
     margin: 0;

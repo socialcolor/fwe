@@ -15,6 +15,7 @@ export const baseTheme: IBaseTheme = {
         yellow: '#ECB072',
         yellowLight: '#E08B3C',
         black: '#000000',
+        blackText: '#1E1F1B',
         grey: '#D1D1D1',
         greyDark: '#9F9F9F',
         greyLight: '#D9D9D9',

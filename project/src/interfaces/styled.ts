@@ -13,6 +13,7 @@ export interface IBaseTheme {
         yellow: string,
         yellowLight: string,
         black: string,
+        blackText: string,
         grey: string,
         greyDark: string,
         greyLight: string, 
