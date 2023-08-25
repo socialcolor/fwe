@@ -8,6 +8,7 @@ import Compare from '../../components/compare/compare';
 import Offer from '../../components/offer/offer';
 import AboutMe from '../../components/about-me';
 import Features from '../../components/features';
+import Timeline from '../../components/timeline';
 
 export default function MainScreen(): JSX.Element {
     useEffect(() => {
@@ -21,6 +22,7 @@ export default function MainScreen(): JSX.Element {
                 <Offer />
                 <AboutMe />
                 <Features />
+                <Timeline />
                 <Prices />
                 <Compare />
                 <Callback />
