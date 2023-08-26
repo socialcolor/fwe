@@ -25,7 +25,10 @@ export default function Prices(): JSX.Element {
                         slidesPerView: 'auto',
                         spaceBetween: 0,
                         centeredSlides: true,
-                        pagination: false
+                        pagination: {
+                            el: '.swiper-pagination',
+                            type: 'bullets',
+                        }
                     },
                     768: {
                         centeredSlides: true,

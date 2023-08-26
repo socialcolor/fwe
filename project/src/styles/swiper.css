@@ -18,6 +18,10 @@
   color: #000000;
 }
 
+.swiper-pagination-bullets {
+  bottom: 0 !important;
+}
+
 .swiper-pagination-bullet-active {
   background: #4B5830;
 }

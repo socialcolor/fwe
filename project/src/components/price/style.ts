@@ -12,6 +12,7 @@ export const Price = styled.div`
     align-content: center;
     border: 1px solid ${({ theme }) => theme.colors.black};
     border-radius: 16px;
+    margin-bottom: 20px;
 
     @media ${DeviceQuery.tablet} {
         width: 308px;

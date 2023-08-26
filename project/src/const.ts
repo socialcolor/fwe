@@ -136,3 +136,20 @@ export const PriceLists = [
   },
 ]
 
+export const TeachersList = [
+  {
+    name: 'Эмилия Леонович',
+    img: './img/teachers/emilia-leonovich.png',
+    title: 'Преподаватель и носитель языка',
+  },
+  {
+    name: 'Лариса Леванова',
+    img: './img/teachers/larisa-levanov.png',
+    title: 'Преподаватель и носитель языка',
+  },
+  {
+    name: 'Анастасия Москвина',
+    img: './img/teachers/anastasia-moskvina.jpg',
+    title: 'Преподаватель и носитель языка',
+  }
+];

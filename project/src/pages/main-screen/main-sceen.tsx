@@ -10,6 +10,7 @@ import AboutMe from '../../components/about-me';
 import Features from '../../components/features';
 import Timeline from '../../components/timeline';
 import Platform from '../../components/platform';
+import Teachers from '../../components/teachers';
 
 export default function MainScreen(): JSX.Element {
 useEffect(() => {
@@ -28,6 +29,7 @@ useEffect(() => {
                 <Prices />
                 <Compare />
                 <Callback />
+                <Teachers />
              </Main>
             <Footer />
         </React.Fragment>
