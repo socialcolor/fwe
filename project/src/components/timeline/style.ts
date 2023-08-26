@@ -22,10 +22,12 @@ export const Title = styled.h3`
 `
 
 export const TimelineBox = styled.div`
+    max-width: 375px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: stretch;
     padding: 47px 0;
     padding-bottom: 42px;
@@ -52,8 +54,6 @@ export const Line = styled.img`
     right: 0;
 ` 
 export const TimelineColumnRight = styled.div`
-    width: 100%;
-    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

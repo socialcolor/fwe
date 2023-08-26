@@ -36,6 +36,10 @@ export const Description = styled.div`
     background-color: ${props => props.theme.colors.khaki};
     color: ${props => props.theme.colors.white};
 `
+export const Wrapper = styled.div`
+    max-width: 375px;
+    margin: auto;
+`
 export const Text = styled.p`
     margin: 0 19px;
     text-align: center;

@@ -12,7 +12,7 @@ import Timeline from '../../components/timeline';
 import Platform from '../../components/platform';
 
 export default function MainScreen(): JSX.Element {
-    useEffect(() => {
+useEffect(() => {
         document.title = 'Онлайн Школа Французского. French withe Emillie'
     }, [])
 

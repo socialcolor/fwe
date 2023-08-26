@@ -8,6 +8,10 @@ export const Platform = styled.section`
     padding: 16px 35px 29px 35px; 
     background-color: ${props => props.theme.colors.khaki};
 `
+export const Wrapper = styled.div`
+    max-width: 375px;
+    margin: auto;
+`
 export const Title = styled.h3`
     width: 284px;
     margin: 0 auto;

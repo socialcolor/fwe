@@ -4,7 +4,7 @@ import { Title as T } from '../title/style';
 export const About = styled.section`
     width: 100%;
     height: auto;
-`
+    `
 export const Img = styled.img`
     display: block;
     width: 268px;
@@ -15,11 +15,14 @@ export const Img = styled.img`
 `
 
 export const Description = styled.div`
-    padding: 20px 38px 29px 38px;
     margin-top: 23px;
+    padding: 20px 38px 29px 38px;
     background-color: ${props => props.theme.colors.grey};
 `
-
+export const Wrapper = styled.div`
+    max-width: 375px;
+    margin: auto;
+`
 export const Title = styled(T)`
     margin: 0;
     color: ${props => props.theme.colors.khaki};

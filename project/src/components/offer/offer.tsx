@@ -3,16 +3,16 @@ import Title from '../title/title';
 import * as S from './styled';
 
 export default function Offer(): JSX.Element {
-       const textRef = useRef<HTMLParagraphElement>(null);
-       const [height, setHeight] = useState(0);
+    const textRef = useRef<HTMLParagraphElement>(null);
+    const [height, setHeight] = useState(0);
 
-       const onClickButton = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        if(!height && textRef.current) {
+    const onClickButton = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        if (!height && textRef.current) {
             setHeight(textRef.current.scrollHeight)
         } else {
             setHeight(0)
         }
-       };
+    };
 
     return (
         <S.Section>
@@ -32,6 +32,7 @@ export default function Offer(): JSX.Element {
                 </S.Circle>
             </div>
             <S.Description>
+                <S.Wrapper>
                 <Title as={'p'} style={{
                     color: 'white',
                     margin: '0 auto 29px',
@@ -42,6 +43,7 @@ export default function Offer(): JSX.Element {
                 </S.Text>
                 <S.MoreText ref={textRef} $height={height}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus doloremque inventore consequuntur, a quis libero modi consequatur minus aspernatur possimus, totam accusamus quos provident maiores. Nisi tenetur molestias consectetur quam?</S.MoreText>
                 <S.MoreButton onClick={onClickButton} $show={height}>{height ? 'Свернуть' : 'Узнать подробнее'}</S.MoreButton>
+                </S.Wrapper>
             </S.Description>
             <S.Achievements>
                 <S.AchievementsItem>
