@@ -30,7 +30,7 @@ useEffect(() => {
                 <Platform />
                 <Prices />
                 <Compare />
-                <Callback />
+                <Callback id={'trial'}/>
                 <Teachers />
                 <Reviews />
                 <Faq />

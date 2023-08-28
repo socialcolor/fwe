@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function Faq(): JSX.Element {
     return (
-        <S.Faq>
+        <S.Faq id={'faq'}>
             <Title as={'h3'}>часто задаваемые вопросы</Title>
             <S.Text>Если не найдете свой вопрос в списке - обязательно свяжитесь с нами</S.Text>
             <S.Questions>

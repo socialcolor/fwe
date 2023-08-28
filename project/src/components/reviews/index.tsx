@@ -10,7 +10,7 @@ import '../../styles/swiper.css';
 
 export default function Reviews(): JSX.Element {
     return (
-        <S.Reviews className={'reviews'}>
+        <S.Reviews id={'review'} className={'reviews'}>
             <S.Title as={'h3'}>Что говорят наши ученики</S.Title>
             <S.Wrapper>
                 <Swiper

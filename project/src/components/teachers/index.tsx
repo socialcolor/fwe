@@ -11,7 +11,7 @@ import '../../styles/swiper.css';
 
 export default function Teachers(): JSX.Element {
     return (
-        <S.Teachers>
+        <S.Teachers id={'teachers'}>
             <Title as={'h3'}>наши преподаватели</Title>
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}

@@ -1,7 +1,7 @@
 import * as S from './style';
 import { baseTheme } from '../../styles/theme';
 
-export default function Callback({question}: {question?: boolean}):JSX.Element {
+export default function Callback({question, id}: {question?: boolean, id?: string}):JSX.Element {
     if (question) {
         return (
             <S.Form name={'callback'} method={"post"} action={'api/callback'}>
@@ -18,7 +18,7 @@ export default function Callback({question}: {question?: boolean}):JSX.Element {
         )
     }
     return (
-        <S.Form name={'callback'} method={"post"} action={'api/callback'}>
+        <S.Form id={id} name={'callback'} method={"post"} action={'api/callback'}>
             <S.Title as={'h3'}>Хотите получить пробный урок? <S.UpperOrangeText>суперцена</S.UpperOrangeText> всего 500руб.</S.Title>
             <S.Text $weight={600} $color={baseTheme.colors.khaki}>Оставьте заявку и мы свяжемся с вами.</S.Text>
             <S.WrappersInput>

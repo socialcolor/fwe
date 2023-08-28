@@ -2,7 +2,7 @@ import * as S from './style';
 
 export default function AboutMe(): JSX.Element {
     return (
-        <S.About>
+        <S.About id={'about'}>
             <S.Img src={'./img/emillie.jpg'} alt={'Эмилия'} width={268} height={328} />
             <S.Description>
                 <S.Wrapper>

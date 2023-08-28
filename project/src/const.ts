@@ -9,91 +9,73 @@ export const enum AppRoute {
   Other = '*',
 }
 
+
 // export const Menu: MenuType = {
-//   about: {
-//     name: 'О нас',
-//     link: '#about',
-//   },
 //   price: {
-//     name: 'Тарифы и цены',
-//     link: '#price',
+//     name: 'Цены',
+//     link: `${AppRoute.Root}#price`,
 //   },
-//   teachers: {
-//     name: 'Учителя',
-//     link: '#teachers',
+//   rules: {
+//     name: 'Правила',
+//     link: `${AppRoute.Rules}`,
 //   },
-//   reviews: {
-//     name: 'Отзывы',
-//     link: '#reviews',
-//   },
-//   question: {
-//     name: 'Вопросы',
-//     link: '#question',
+//   offer: {
+//     name: 'Оферта',
+//     link: AppRoute.Contract,
 //   },
 //   contacts: {
 //     name: 'Контакты',
-//     link: '#contacts',
-//   },
-// }
-
-// export const MenuFooter: MenuType = {
-//   about: {
-//     name: 'О нас',
-//     link: '#about',
-//   },
-//   price: {
-//     name: 'Тарифы',
-//     link: '#price',
-//   },
-//   teachers: {
-//     name: 'Пробный урок',
-//     link: '#teachers',
-//   },
-//   reviews: {
-//     name: 'Отзывы',
-//     link: '#reviews',
-//   },
-//   contacts: {
-//     name: 'Наши учителя',
-//     link: '#contacts',
+//     link: `{AppRoute.Root}#contacts`,
 //   },
 // }
 
 export const Menu: MenuType = {
+  about: {
+    name: 'О нас',
+    link: `${AppRoute.Root}#about`,
+  },
   price: {
-    name: 'Цены',
+    name: 'Тарифы и цены',
     link: `${AppRoute.Root}#price`,
+  },
+  techers: {
+    name: 'Учителя',
+    link: `${AppRoute.Root}#teachers`,
+  },
+  review: {
+    name: 'Отзывы',
+    link: `${AppRoute.Root}#review`,
   },
   rules: {
     name: 'Правила',
     link: `${AppRoute.Rules}`,
-  },
-  offer: {
-    name: 'Оферта',
-    link: AppRoute.Contract,
-  },
-  contacts: {
-    name: 'Контакты',
-    link: `{AppRoute.Root}#contacts`,
   },
 }
 
 export const MenuFooter: MenuType = {
+  about: {
+    name: 'О нас',
+    link: `${AppRoute.Root}#about`,
+  },
   price: {
-    name: 'Цены',
+    name: 'Тарифы и цены',
     link: `${AppRoute.Root}#price`,
+  },
+  trial: {
+    name: 'Пробный урок',
+    link: `${AppRoute.Root}#trial`,
+  },
+  review: {
+    name: 'Отзывы',
+    link: `${AppRoute.Root}#review`,
+  },
+  techers: {
+    name: 'Наши учителя',
+    link: `${AppRoute.Root}#teachers`,
   },
   rules: {
     name: 'Правила',
     link: `${AppRoute.Rules}`,
-  },
-  offer: {
-    name: 'Оферта',
-    link: AppRoute.Contract,
-  },
-  contacts: {
-    name: 'Контакты',
-    link: `${AppRoute.Root}#contacts`,
   },
 }
 
