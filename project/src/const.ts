@@ -1,4 +1,5 @@
 import { MenuType } from "./type/menu";
+import { FaqType } from "./type/faq";
 
 export const enum AppRoute {
   Root = '/',
@@ -153,3 +154,40 @@ export const TeachersList = [
     title: 'Преподаватель и носитель языка',
   }
 ];
+
+export const ReviewsList = [
+  {
+    name: 'Ученик 1',
+    img: './img/teachers/Ellipse6.jpg',
+    title: 'Lorem ipsum dolor sit amet consectetur. Accumsan vulputate fames eget sed placerat quis. Hendrerit vitae nunc faucibus amet. Odio tincidunt eget ut lacus quam. Odio tristique risus sodales turpis nec turpis duis fermentum.',
+  },
+  {
+    name: 'Ученик 2',
+    img: './img/teachers/Ellipse7.jpg',
+    title: 'Lorem ipsum dolor sit amet consectetur. Accumsan vulputate fames eget sed placerat quis. Hendrerit vitae nunc faucibus amet. Odio tincidunt eget ut lacus quam. Odio tristique risus sodales turpis nec turpis duis fermentum.',
+  },
+  {
+    name: 'Ученик 3',
+    img: './img/teachers/Ellipse8.jpg',
+    title: 'Lorem ipsum dolor sit amet consectetur. Accumsan vulputate fames eget sed placerat quis. Hendrerit vitae nunc faucibus amet. Odio tincidunt eget ut lacus quam. Odio tristique risus sodales turpis nec turpis duis fermentum.',
+  }
+];
+
+export const FaqList:FaqType = [
+  {
+    question: 'как лучше изучать язык? индивидуально или в группе?',
+    answer: 'Lorem ipsum dolor sit amet consectetur. Accumsan vulputate fames eget sed placerat quis. Hendrerit vitae nunc faucibus amet. Odio tincidunt eget ut lacus quam. Odio tristique risus sodales turpis nec turpis duis fermentum.'
+  },
+  {
+    question: 'Могу ли я начать изучать французский язык если у меня начальный уровень?',
+    answer: 'Lorem ipsum dolor sit amet consectetur. Accumsan vulputate fames eget sed placerat quis. Hendrerit vitae nunc faucibus amet. Odio tincidunt eget ut lacus quam. Odio tristique risus sodales turpis nec turpis duis fermentum.'
+  },
+  {
+    question: 'как вы можете гарантировать результат?',
+    answer: 'Lorem ipsum dolor sit amet consectetur. Accumsan vulputate fames eget sed placerat quis. Hendrerit vitae nunc faucibus amet. Odio tincidunt eget ut lacus quam. Odio tristique risus sodales turpis nec turpis duis fermentum.'
+  },
+  {
+    question: 'может ли мой ребенок изучать французский язык в вашей школе?',
+    answer: 'Lorem ipsum dolor sit amet consectetur. Accumsan vulputate fames eget sed placerat quis. Hendrerit vitae nunc faucibus amet. Odio tincidunt eget ut lacus quam. Odio tristique risus sodales turpis nec turpis duis fermentum.'
+  },
+]

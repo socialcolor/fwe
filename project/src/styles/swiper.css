@@ -6,7 +6,7 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: transparent;
 
   /* Center slide text vertically */
   display: flex;
@@ -24,4 +24,10 @@
 
 .swiper-pagination-bullet-active {
   background: #4B5830;
+}
+.reviews .swiper-pagination-bullet-active {
+  background: #ffffff;
+}
+.reviews  [class^="swiper-button-"] {
+  color: #ffffff;
 }

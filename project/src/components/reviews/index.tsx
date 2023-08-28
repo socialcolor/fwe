@@ -1,6 +1,5 @@
 import * as S from './style';
-import Title from '../title/title';
-import { TeachersList } from '../../const';
+import { ReviewsList } from '../../const';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from "swiper";
 
@@ -9,10 +8,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import '../../styles/swiper.css';
 
-export default function Teachers(): JSX.Element {
+export default function Reviews(): JSX.Element {
     return (
-        <S.Teachers>
-            <Title as={'h3'}>наши преподаватели</Title>
+        <S.Reviews className={'reviews'}>
+            <S.Title as={'h3'}>Что говорят наши ученики</S.Title>
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 navigation={true}
@@ -20,23 +19,19 @@ export default function Teachers(): JSX.Element {
                     clickable: true
                 }}
                 slidesPerView={'auto'}
-                autoplay={{
-                    delay: 2500,
-                }
-                  }
                 loop={true}
             >
-                {TeachersList.map(slide => (
+                {ReviewsList.map(slide => (
                     <SwiperSlide key={slide.name}>
-                        <S.Teacher>
+                        <S.Review>
                             <S.Circle src={slide.img} />
                             <S.Name>{slide.name}</S.Name>
                             <S.Caption>{slide.title}</S.Caption>
-                        </S.Teacher>
+                        </S.Review>
                     </SwiperSlide>
                 )
                 )}
             </Swiper >
-        </S.Teachers>
+        </S.Reviews>
     )
 }

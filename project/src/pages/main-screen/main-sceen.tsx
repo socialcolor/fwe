@@ -11,6 +11,8 @@ import Features from '../../components/features';
 import Timeline from '../../components/timeline';
 import Platform from '../../components/platform';
 import Teachers from '../../components/teachers';
+import Reviews from '../../components/reviews';
+import Faq from '../../components/faq';
 
 export default function MainScreen(): JSX.Element {
 useEffect(() => {
@@ -30,6 +32,8 @@ useEffect(() => {
                 <Compare />
                 <Callback />
                 <Teachers />
+                <Reviews />
+                <Faq />
              </Main>
             <Footer />
         </React.Fragment>
