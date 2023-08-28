@@ -34,6 +34,7 @@ useEffect(() => {
                 <Teachers />
                 <Reviews />
                 <Faq />
+                <Callback question/>
              </Main>
             <Footer />
         </React.Fragment>

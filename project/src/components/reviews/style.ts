@@ -2,11 +2,15 @@ import styled from 'styled-components';
 import { Title as T } from '../title/style';
 
 export const Reviews = styled.section`
-    max-width: 375px;
     margin: auto;
     background-color: ${props => props.theme.colors.khaki};
     color: ${props => props.theme.colors.white};
     padding-top: 1px;
+`
+
+export const Wrapper = styled.div`
+    max-width: 375px;
+    margin: 0 auto;
 `
 export const Title = styled(T)`
     color: ${props => props.theme.colors.white};

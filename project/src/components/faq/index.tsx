@@ -4,7 +4,6 @@ import { FaqList } from '../../const';
 import { useState } from 'react';
 
 export default function Faq(): JSX.Element {
-
     return (
         <S.Faq>
             <Title as={'h3'}>часто задаваемые вопросы</Title>

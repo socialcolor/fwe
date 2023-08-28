@@ -17,9 +17,8 @@ export const Text = styled.p`
 `
 
 export const Questions = styled.ul`
-    list-style-type: none;
     padding: 0;
-    margin: 0;
+    list-style-type: none;
 `
 export const Question = styled.li`
     border-top: 1px solid ${props => props.theme.colors.black};
@@ -27,10 +26,12 @@ export const Question = styled.li`
     overflow: hidden;
 `
 export const wrapper = styled.div`
+    margin: 0 auto;
+    max-width: 375px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 `
 export const Caption = styled.h4`
@@ -44,8 +45,9 @@ export const Caption = styled.h4`
     text-transform: uppercase;
 `
 export const Answer = styled.p<{ $height?: number; }>`
-    max-height: ${props => props.$height? props.$height : 0}px;
-    margin: 0;
+    max-width: 375px;
+    margin: 0 auto;
+    max-height: ${props => props.$height ? props.$height : 0}px;
     color: ${props => props.theme.colors.black};
     font-family: 'Inter', sans-serif;
     font-size: 16px;
