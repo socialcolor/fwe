@@ -7,6 +7,11 @@ export const About = styled.section<{$height: string}>`
     width: 100%;
     padding-top: 37px;
     height: calc(${props => props.$height} - 206px);
+
+    @media ${DeviceQuery.tablet} {
+        width: 786px;
+        margin: 0 auto;
+    }
 `
 export const Img = styled.img`
     display: block;

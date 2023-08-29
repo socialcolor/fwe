@@ -11,10 +11,10 @@ export default function AboutMe(): JSX.Element {
 
     const img = () => {
         console.log(window.innerWidth)
-        if(window.innerWidth <= SizeDevice.mobile) {
+        if(window.innerWidth >= SizeDevice.mobile && window.innerWidth < SizeDevice.tablet) {
             return <S.Img src={'./img/about_emillie-mobile.jpg'} alt={'Эмилия'} width={268} height={328} />
         } 
-        else if(window.innerWidth <= SizeDevice.tablet) {
+        else if(window.innerWidth >= SizeDevice.tablet && window.innerWidth < SizeDevice.desktop) {
             return <S.Img src={'./img/about_emillie-tablet.jpg'} alt={'Эмилия'} width={679} height={858} />
         }
         else if(window.innerWidth >= SizeDevice.desktop) {
