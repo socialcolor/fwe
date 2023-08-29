@@ -18,7 +18,9 @@ export const Wrapper = styled.div`
     margin: auto;
 
     @media ${DeviceQuery.tablet} {
-        max-width: 100%;
+        max-width: 665px;
+        position: relative;
+        z-index: 1;
     }
 `
 export const Title = styled.h3`
@@ -192,12 +194,12 @@ export const EllipseLeft = styled(EllipseRight)`
 
     @media ${DeviceQuery.tablet} {
         position: absolute;
-        left: 30px;
-        bottom: 290px;
+        left: 0;
+        bottom: 210px;
         
         &::before {
             top: 0;
-            left: 240px;
+            left: 210px;
             transform: rotate(270deg);
         }
     }
@@ -217,7 +219,6 @@ export const PlatformScheduleImg = styled.div`
         width: 379px;
         height: 237px;
         background-image: url('./img/platform_schedule-tablet.jpg');
-        height: 237px;
         margin: 0;
         margin-left: auto;
         margin-right: 28px;
