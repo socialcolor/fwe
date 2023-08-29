@@ -9,7 +9,7 @@ export default function Faq(): JSX.Element {
             <Title as={'h3'}>часто задаваемые вопросы</Title>
             <S.Text>Если не найдете свой вопрос в списке - обязательно свяжитесь с нами</S.Text>
             <S.Questions>
-                {FaqList.map(({question, answer}) => (<Accrodion question={question} answer={answer}/>))}
+                {FaqList.map(({question, answer}) => (<Accrodion key={question} question={question} answer={answer}/>))}
             </S.Questions>
         </S.Faq>
     )

@@ -1,10 +1,16 @@
 import * as S from './style';
 import { baseTheme } from '../../styles/theme';
+import { FormEvent } from 'react';
 
 export default function Callback({question, id}: {question?: boolean, id?: string}):JSX.Element {
+    const onFormSend = (evt: FormEvent<HTMLFormElement>): void => {
+        evt.preventDefault();
+        
+      };
+
     if (question) {
         return (
-            <S.Form name={'callback'} method={"post"} action={'api/callback'}>
+            <S.Form name={'callback'} method={"post"} action={'api/callback'} onSubmit={onFormSend}>
                 <S.Title as={'h3'}>Остались вопросы?</S.Title>
                 <S.Text $weight={600} $color={baseTheme.colors.khaki}>Если не найдете свой вопрос в списке - обязательно свяжитесь с нами</S.Text>
                 <S.WrappersInput>
@@ -18,7 +24,7 @@ export default function Callback({question, id}: {question?: boolean, id?: strin
         )
     }
     return (
-        <S.Form id={id} name={'callback'} method={"post"} action={'api/callback'}>
+        <S.Form id={id} name={'trian'} method={"post"} action={'api/callback'} onSubmit={onFormSend}>
             <S.Title as={'h3'}>Хотите получить пробный урок? <S.UpperOrangeText>суперцена</S.UpperOrangeText> всего 500руб.</S.Title>
             <S.Text $weight={600} $color={baseTheme.colors.khaki}>Оставьте заявку и мы свяжемся с вами.</S.Text>
             <S.WrappersInput>
