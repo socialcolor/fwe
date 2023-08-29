@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { DeviceQuery } from '../../styles/device-query';
 
 export const Platform = styled.section`
     position: relative;
@@ -7,23 +8,37 @@ export const Platform = styled.section`
     height: auto;
     padding: 16px 35px 29px 35px; 
     background-color: ${props => props.theme.colors.khaki};
+
+    @media ${DeviceQuery.tablet} {
+        padding: 23px 48px 76px 48px;
+    }
 `
 export const Wrapper = styled.div`
     max-width: 375px;
     margin: auto;
+
+    @media ${DeviceQuery.tablet} {
+        max-width: 100%;
+    }
 `
 export const Title = styled.h3`
     width: 284px;
     margin: 0 auto;
     color: ${props => props.theme.colors.white};
     text-align: center;
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     letter-spacing: 0.4px;
     text-transform: uppercase;
+
+    @media ${DeviceQuery.tablet} {
+        width: 563px;
+        font-size: 28px;
+        letter-spacing: 0.56px;
+    }
 `
 export const Cirle = styled.p`
     position: relative;
@@ -52,6 +67,21 @@ export const Cirle = styled.p`
         background-size: cover;
         background-repeat: no-repeat;
     }
+
+    @media ${DeviceQuery.tablet} {
+        position: absolute;
+        top: 200px;
+        right: 70px;
+
+        &::before {
+            width: 252px;
+            height: 71px;
+            background-image: url('./img/platform_arrow-down-tablet.svg');
+            top: -56px;
+            left: -197px;
+            z-index: -1;
+        }
+    }
     `
 export const CircleText = styled.span`
     width: 162px;
@@ -65,11 +95,25 @@ export const CircleText = styled.span`
     letter-spacing: 0.68px;
     text-transform: uppercase;
 `
-export const PlatformIndexImg = styled.img`
+export const PlatformIndexImg = styled.div`
     position: relative;
     z-index: -1;
     display: block;
+    width: 307px;
+    height: 360px;
     margin: 26px auto 0 auto;
+    background-image: url('img/platform_index.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    @media ${DeviceQuery.tablet} {
+        z-index: -2;
+        width: 379px;
+        height: 444px;
+        background-image: url('img/platform_index-tablet.jpg');
+        margin: 0;
+        margin-top: 91px;
+    }
 `
 export const EllipseRight = styled.p`
     position: relative;
@@ -84,7 +128,7 @@ export const EllipseRight = styled.p`
     align-items: center;
     justify-content: center;
     margin-left: auto;
-
+    
     &::before {
         content: '';
         position: absolute;
@@ -97,6 +141,18 @@ export const EllipseRight = styled.p`
         background-image: url('./img/platform_arrow-up.svg');
         background-size: cover;
         background-repeat: no-repeat;
+    }
+    
+    @media ${DeviceQuery.tablet} {
+        margin: 0;
+        left: 400px;
+        bottom: 140px;
+
+        &::before {
+            left: -130px;
+            top: -73px;
+            transform: scale(-1, 1) rotate(85deg);
+        }
     }
 ` 
 export const EllipseText = styled.span`
@@ -133,10 +189,37 @@ export const EllipseLeft = styled(EllipseRight)`
         background-size: cover;
         background-repeat: no-repeat;
     }
+
+    @media ${DeviceQuery.tablet} {
+        position: absolute;
+        left: 30px;
+        bottom: 290px;
+        
+        &::before {
+            top: 0;
+            left: 240px;
+            transform: rotate(270deg);
+        }
+    }
 `
-export const PlatformScheduleImg = styled.img`
+export const PlatformScheduleImg = styled.div`
     position: relative;
-    z-index: -2;
     display: block;
+    width: 307px;
+    height: 180px;
     margin: 26px auto 0 auto;
+    z-index: -2;
+    background-image: url('./img/platform_schedule.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    @media ${DeviceQuery.tablet} {
+        width: 379px;
+        height: 237px;
+        background-image: url('./img/platform_schedule-tablet.jpg');
+        height: 237px;
+        margin: 0;
+        margin-left: auto;
+        margin-right: 28px;
+    }
 `

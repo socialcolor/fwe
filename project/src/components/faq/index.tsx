@@ -1,5 +1,5 @@
 import * as S from './style'
-import Title from '../title/title';
+import Title from '../title';
 import { FaqList } from '../../const';
 import { useState } from 'react';
 

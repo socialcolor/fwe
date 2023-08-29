@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components';
+import { DeviceQuery } from '../../styles/device-query';
+import Title from '../title';
 
 const arrow = css`
         display: block;
@@ -6,14 +8,29 @@ const arrow = css`
         width: 90px;
         height: 28px;
 `
-export const Section = styled.section`
+export const Offer = styled.section`
     width: 100%;
     height: auto;
+`
+export const Cilres = styled.div`
+    @media ${DeviceQuery.tablet} {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: center;
+        column-gap: 31px;
+    }
 `
 export const Circle = styled.div`
     max-width: 200px;
     margin: 0 auto;
     text-align: center;
+
+    @media ${DeviceQuery.tablet} {
+        margin: 0;
+
+    }
 `
 export const Img = styled.img`
     width: 160px;
@@ -39,9 +56,33 @@ export const Description = styled.div`
 export const Wrapper = styled.div`
     max-width: 375px;
     margin: auto;
+
+    @media ${DeviceQuery.tablet} {
+        max-width: 100%;
+    }
+`
+export const DescriptTitle = styled(Title)`
+    width: 100%;
+    margin: 0 auto 29px;
+    color: ${props => props.theme.colors.white};
+    text-align: center;
+    font-family: ${props => props.theme.fonts.title};
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+
+    @media ${DeviceQuery.tablet} {
+        width: 375px;
+        font-size: 28px;
+        letter-spacing: 0.56px;
+    }
 `
 export const Text = styled.p`
     margin: 0 19px;
+    padding-top: 20px;
     text-align: center;
     font-family: ${props => props.theme.fonts.title};
     font-size: 19px;
@@ -49,9 +90,18 @@ export const Text = styled.p`
     font-weight: 400;
     line-height: 25px;
     letter-spacing: 0.19px;
+
+    @media ${DeviceQuery.tablet} {
+        max-width: 684px;
+        margin: 0 auto;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.26px;
+    }
 `
 
-export const MoreText = styled(Text) <{ $height: number }>`
+export const MoreText = styled.div <{ $height: number }>`
     height: ${props => props.$height}px;
     transition: height 0.7s ease-in;
     overflow: hidden;
@@ -62,6 +112,7 @@ export const MoreButton = styled.button<{ $show: number }>`
     padding: 0;
     margin: 26px auto 0;
     display: block;
+    font-family: ${props => props.theme.fonts.title};
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
@@ -82,6 +133,10 @@ export const MoreButton = styled.button<{ $show: number }>`
       }`
     }
 
+    @media ${DeviceQuery.tablet} {
+        font-size: 18px;
+    }
+
 `
 export const Achievements = styled.ul`
     margin: auto;
@@ -89,6 +144,15 @@ export const Achievements = styled.ul`
     background-color: ${props => props.theme.colors.white};
     list-style-type: none;
     font-family: ${props => props.theme.fonts.title};
+
+    @media ${DeviceQuery.tablet} {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: center; 
+        column-gap: 14px;
+    }
 `
 export const AchievementsItem = styled.li`
     display: block;
@@ -114,7 +178,7 @@ export const AchievementsName = styled.p`
     margin: 0 auto;
     color: ${props => props.theme.colors.khaki};
     text-align: center;
-    font-family: Inter;
+    font-family: ${props => props.theme.fonts.title};
     font-size: 24px;
     font-style: normal;
     font-weight: 600;

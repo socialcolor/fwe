@@ -14,6 +14,12 @@ export const Title = styled.h2`
     padding: 0;
     margin: 24px auto;
 
+    @media ${DeviceQuery.tablet} {
+        font-size: 28px;
+        line-height: normal;
+        letter-spacing: 0.56px;
+        margin: 34px auto;
+    }
     @media ${DeviceQuery.desktop} {
         font-size: 36px;
         line-height: 44px;

@@ -1,5 +1,5 @@
 import * as S from './style';
-import Title from '../title/title';
+import Title from '../title';
 import { TeachersList } from '../../const';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from "swiper";

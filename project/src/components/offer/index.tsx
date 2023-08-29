@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import Title from '../title/title';
+import Title from '../title';
 import * as S from './styled';
 
 export default function Offer(): JSX.Element {
@@ -15,9 +15,9 @@ export default function Offer(): JSX.Element {
     };
 
     return (
-        <S.Section>
+        <S.Offer>
             <Title as={'h3'}>Если изучение языка для вас </Title>
-            <div>
+            <S.Cilres>
                 <S.Circle>
                     <S.Img src={'./img/offer-img-1.jpg'} />
                     <S.Caption>Кажется скучным</S.Caption>
@@ -30,18 +30,16 @@ export default function Offer(): JSX.Element {
                     <S.Img src={'./img/offer-img-3.jpg'} />
                     <S.Caption>занимает много времени </S.Caption>
                 </S.Circle>
-            </div>
+            </S.Cilres>
             <S.Description>
                 <S.Wrapper>
-                <Title as={'p'} style={{
-                    color: 'white',
-                    margin: '0 auto 29px',
-                    width: '300px',
-                }}>поздравляем! вы пришли по адресу:</Title>
-                <S.Text>Уникальность нашей методики заключается в использовании интерактивной образовательной платформы.
+                <S.DescriptTitle as={'p'}>поздравляем!<br /> вы пришли по адресу:</S.DescriptTitle>
+                <S.Text>Уникальность нашей методики заключается в использовании интерактивной образовательной платформы.<br />
                     На пробном занятии вы проходите тестирование, на котором определяется ваш уровень языка, а также получаете подробную обратную связь от преподавателя с рекомендациями по формату, длительности и уровню.
                 </S.Text>
-                <S.MoreText ref={textRef} $height={height}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus doloremque inventore consequuntur, a quis libero modi consequatur minus aspernatur possimus, totam accusamus quos provident maiores. Nisi tenetur molestias consectetur quam?</S.MoreText>
+                <S.MoreText ref={textRef} $height={height}>
+                    <S.Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus doloremque inventore consequuntur, a quis libero modi consequatur minus aspernatur possimus, totam accusamus quos provident maiores. Nisi tenetur molestias consectetur quam?</S.Text> 
+                </S.MoreText>
                 <S.MoreButton onClick={onClickButton} $show={height}>{height ? 'Свернуть' : 'Узнать подробнее'}</S.MoreButton>
                 </S.Wrapper>
             </S.Description>
@@ -59,6 +57,6 @@ export default function Offer(): JSX.Element {
                     <S.AchievementsName>Успешно сдали экзамен</S.AchievementsName>
                 </S.AchievementsItem>
             </S.Achievements>
-        </S.Section>
+        </S.Offer>
     )
 }

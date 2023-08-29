@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import * as S from '../../styles/default';
-import Header from "../../components/header/header";
+import Header from "../../components/header";
 import Footer from "../../components/footer/footer";
-import Main from "../../components/main/main";
+import Main from "../../components/main";
 import { AppRoute } from "../../const";
 
 

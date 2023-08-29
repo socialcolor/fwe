@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import Header from '../../components/header/header';
+import Header from '../../components/header';
 import Footer from '../../components/footer/footer';
-import Main from '../../components/main/main';
+import Main from '../../components/main';
 import Prices from '../../components/price/prices';
 import Callback from '../../components/callback/callback';
 import Compare from '../../components/compare/compare';
-import Offer from '../../components/offer/offer';
+import Offer from '../../components/offer';
 import AboutMe from '../../components/about-me';
 import Features from '../../components/features';
 import Timeline from '../../components/timeline';
