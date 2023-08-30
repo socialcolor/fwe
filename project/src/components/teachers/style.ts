@@ -1,8 +1,13 @@
 import styled from 'styled-components';
+import { DeviceQuery } from '../../styles/device-query';
 
 export const Teachers = styled.section`
     max-width: 375px;
     margin: auto;
+
+    @media ${DeviceQuery.tablet} {
+        max-width: 768px;
+    }
 `
 export const Teacher = styled.div`
     width: 130px;

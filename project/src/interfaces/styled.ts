@@ -9,6 +9,7 @@ export interface IBaseTheme {
         orange: string,
         orangeDark: string,
         orangeLight: string,
+        orangeMiddle: string,
         beige: string,
         yellow: string,
         yellowLight: string,

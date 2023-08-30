@@ -11,6 +11,7 @@ export const baseTheme: IBaseTheme = {
         orange: '#FF7542',
         orangeDark: '#BC5D05',
         orangeLight: '#F67600',
+        orangeMiddle: '#BE7F3E',
         beige: '#E0D3B0',
         yellow: '#ECB072',
         yellowLight: '#E08B3C',
@@ -21,8 +22,8 @@ export const baseTheme: IBaseTheme = {
         greyLight: '#D9D9D9',
     },
     fonts: {
-        title: 'Inter, sans-serif',
-        text: 'Montserrat, sans-serif',
+        title: '"Inter", sans-serif',
+        text: '"Montserrat", sans-serif',
     },
     media: {
         phone: '(max-width: 425px)',

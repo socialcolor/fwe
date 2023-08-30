@@ -113,7 +113,7 @@ export const PriceLists = [
     tarifs: [
       {
         duration: 60,
-        price: 800,
+        price: 1000,
       },
     ]
   },

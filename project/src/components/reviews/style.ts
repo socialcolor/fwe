@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Title as T } from '../title/style';
+import { DeviceQuery } from '../../styles/device-query';
 
 export const Reviews = styled.section`
     margin: auto;
@@ -11,6 +12,11 @@ export const Reviews = styled.section`
 export const Wrapper = styled.div`
     max-width: 375px;
     margin: 0 auto;
+
+    @media ${DeviceQuery.tablet} {
+        max-width: 768px;
+        padding-bottom: 30px;
+    }
 `
 export const Title = styled(T)`
     color: ${props => props.theme.colors.white};
@@ -26,12 +32,18 @@ export const Circle = styled.img`
 `
 export const Name = styled.p`
     text-align: center;
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     margin: 0;
+
+    @media ${DeviceQuery.tablet} {
+        font-size: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 `
 export const Caption = styled.p`
     width: 266px;
@@ -46,4 +58,11 @@ export const Caption = styled.p`
     letter-spacing: 1.53px;
     padding-bottom: 24px;
     margin-top: 10px;
+
+    @media ${DeviceQuery.tablet} {
+        width: 500px;
+        font-size: 20px;
+        line-height: 36px;
+        letter-spacing: 1.8px;
+    }
 `

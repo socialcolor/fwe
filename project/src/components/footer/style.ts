@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { DeviceQuery } from '../../styles/device-query';
-import { Link } from 'react-router-dom';
+import { Link as L } from 'react-router-dom';
 
 export const Footer = styled.footer`
     width: 100%;
@@ -97,7 +97,7 @@ export const NavList = styled.div`
         margin-bottom: 32px;
     }
 `
-export const NavLink = styled(Link)`
+export const NavLink = styled(L)`
     list-style-type: none;
     text-transform: uppercase;
     color: ${({ theme }) => theme.colors.white};
@@ -155,5 +155,8 @@ export const Text = styled.p`
 
     @media ${DeviceQuery.tablet} {
         font-size: 18px;
+        line-height: 23px;
+        letter-spacing: 0.36px;
+        font-weight: 300;
     }
 `

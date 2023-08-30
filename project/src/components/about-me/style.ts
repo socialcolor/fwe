@@ -26,6 +26,7 @@ export const Img = styled.img`
         height: 858px;
         margin: 0;
         padding: 0;
+        margin-left: -4px;
     }
 `
 

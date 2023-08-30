@@ -4,7 +4,7 @@ import Footer from '../../components/footer/footer';
 import Main from '../../components/main';
 import Prices from '../../components/price/prices';
 import Callback from '../../components/callback/callback';
-import Compare from '../../components/compare/compare';
+import Compare from '../../components/compare';
 import Offer from '../../components/offer';
 import AboutMe from '../../components/about-me';
 import Features from '../../components/features';

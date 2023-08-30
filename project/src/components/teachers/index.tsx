@@ -19,12 +19,19 @@ export default function Teachers(): JSX.Element {
                 pagination={{
                     clickable: true
                 }}
-                slidesPerView={'auto'}
                 autoplay={{
                     delay: 2500,
                 }
                   }
                 loop={true}
+                breakpoints={{
+                    320: {
+                        slidesPerView: 'auto'
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        }
+                }}
             >
                 {TeachersList.map(slide => (
                     <SwiperSlide key={slide.name}>

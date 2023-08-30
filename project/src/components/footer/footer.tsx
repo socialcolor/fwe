@@ -15,6 +15,9 @@ export default function Footer(): JSX.Element {
                 </S.Nav>
                 <S.Contacts>
                     <S.ContactsCaption>Контакты</S.ContactsCaption>
+                    <S.Text>
+                        <S.NavLink to={'mailto:bonjour@frenchwithemilie.ru'}>Написать на Email</S.NavLink>
+                    </S.Text>
                     <S.Text>ИП Тарханян Г.Ш.</S.Text>
                     <S.Text>ОГРНИП 322774600762101</S.Text>
                     <S.Text>ИНН 772084229151</S.Text>
