@@ -1,5 +1,7 @@
 import * as S from './style'
 import Title from '../title'
+import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { PriceLists } from '../../const'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from "swiper";
@@ -8,10 +10,16 @@ import 'swiper/css';
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import '../../styles/swiper.css';
+import Modal from '../modal';
 
 
 export default function Prices(): JSX.Element {
+    const [showModal, setShowModal] = useState(false);
 
+    const onModalhandler = (evt: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+        evt.preventDefault();
+        setShowModal(!showModal);
+    }
 
     return (
         <section id={'price'}>
@@ -56,12 +64,13 @@ export default function Prices(): JSX.Element {
                                         <S.PriceItem key={String(tarif.duration) + String(tarif.price)}>{tarif.duration} мин - {tarif.price} руб.</S.PriceItem>
                                     ))}
                                 </S.PriceList>
-                                <S.Button>записаться на урок</S.Button>
+                                <S.Button onClick={onModalhandler}>записаться на урок</S.Button>
                             </S.Body>
                         </S.Price>
                     </SwiperSlide>
                 ))}
             </Swiper>
+            {showModal && createPortal(<Modal onClose={onModalhandler}></Modal>, document.body)}
         </section>
     )
 }
