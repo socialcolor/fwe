@@ -21,6 +21,10 @@ export const Cilres = styled.div`
         justify-content: center;
         column-gap: 31px;
     }
+    @media ${DeviceQuery.desktop} {
+        margin-top: 66px;
+        padding-bottom: 65px;
+    }
 `
 export const Circle = styled.div`
     max-width: 200px;
@@ -29,7 +33,9 @@ export const Circle = styled.div`
 
     @media ${DeviceQuery.tablet} {
         margin: 0;
-
+    }
+    @media ${DeviceQuery.desktop} {
+        max-width: 250px;
     }
 `
 export const Img = styled.img`
@@ -46,12 +52,25 @@ export const Caption = styled.p`
     line-height: normal;
     letter-spacing: 0.24px;
     text-transform: uppercase;
+
+    @media ${DeviceQuery.desktop} {
+        font-size: 32px;
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
 `
 export const Description = styled.div`
     padding-top: 30px;
     padding-bottom: 10px;
     background-color: ${props => props.theme.colors.khaki};
     color: ${props => props.theme.colors.white};
+
+    @media ${DeviceQuery.desktop} {
+        max-width: 1210px;
+        margin: auto;
+        border-radius: 20px;
+        padding: 31px 0;
+    }
 `
 export const Wrapper = styled.div`
     max-width: 375px;
@@ -79,6 +98,12 @@ export const DescriptTitle = styled(Title)`
         font-size: 28px;
         letter-spacing: 0.56px;
     }
+    @media ${DeviceQuery.desktop} {
+        width: 500px;
+        font-size: 36px;
+        letter-spacing: 0.72px;
+        margin-bottom: 30px;
+    }
 `
 export const Text = styled.p`
     margin: 0 19px;
@@ -98,6 +123,12 @@ export const Text = styled.p`
         font-weight: 500;
         line-height: normal;
         letter-spacing: 0.26px;
+    }
+    @media ${DeviceQuery.desktop} {
+        max-width: 1174px;
+        font-size: 30px;
+        letter-spacing: 0.3px;
+        /* padding-top: 0; */
     }
 `
 
@@ -136,6 +167,10 @@ export const MoreButton = styled.button<{ $show: number }>`
     @media ${DeviceQuery.tablet} {
         font-size: 18px;
     }
+    @media ${DeviceQuery.desktop} {
+        font-size: 27px;
+        margin-top: 30px;
+    }
 
 `
 export const Achievements = styled.ul`
@@ -153,6 +188,11 @@ export const Achievements = styled.ul`
         justify-content: center; 
         column-gap: 14px;
     }
+    @media ${DeviceQuery.desktop} {
+        width: 1077px;
+        justify-content: space-between;
+        column-gap: 190px;
+    }
 `
 export const AchievementsItem = styled.li`
     display: block;
@@ -160,6 +200,10 @@ export const AchievementsItem = styled.li`
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    @media ${DeviceQuery.desktop} {
+        margin: 0;
     }
 `
 export const AchievementsNumber = styled.p`
@@ -171,6 +215,10 @@ export const AchievementsNumber = styled.p`
     font-weight: 800;
     line-height: normal;
     text-transform: uppercase;
+
+    @media ${DeviceQuery.desktop} {
+        font-size: 90px;
+    }
 `
 export const AchievementsName = styled.p`
     width: 190px;
@@ -184,4 +232,8 @@ export const AchievementsName = styled.p`
     font-weight: 600;
     line-height: normal;
     text-transform: uppercase;
+
+    @media ${DeviceQuery.desktop} {
+        font-size: 28px;
+    }
 `

@@ -10,15 +10,10 @@ export default function AboutMe(): JSX.Element {
     }, [aboutRef])
 
     const img = () => {
-        if(window.innerWidth >= SizeDevice.mobile && window.innerWidth < SizeDevice.tablet) {
+        if (window.innerWidth >= SizeDevice.mobile && window.innerWidth < SizeDevice.tablet) {
             return <S.Img src={'./img/about_emillie-mobile.jpg'} alt={'Эмилия'} width={268} height={328} />
-        } 
-        else if(window.innerWidth >= SizeDevice.tablet && window.innerWidth < SizeDevice.desktop) {
-            return <S.Img src={'./img/about_emillie-tablet.jpg'} alt={'Эмилия'} width={679} height={858} />
         }
-        else if(window.innerWidth >= SizeDevice.desktop) {
-            return <S.Img src={'./img/about_emillie-desktop.jpg'} alt={'Эмилия'} width={734} height={948} />
-        }
+        return <S.Img src={'./img/about_emillie-tablet.jpg'} alt={'Эмилия'} width={679} height={858} />
     }
 
     return (

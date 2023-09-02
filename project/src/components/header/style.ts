@@ -108,3 +108,50 @@ export const Description = styled.p`
       margin-top: 15px;
     }
 `
+export const ButtonWrapper = styled.div`
+  @media ${DeviceQuery.tablet} {
+    display: flex;
+    margin-top: 16px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 16px;
+  }
+`
+export const Button = styled.button`
+  display: block;
+  width: 225px;
+  height: auto;
+  padding: 18px 14px;
+  margin: 0 auto;
+  margin-top: 16px;
+  outline: none;
+  border: none;
+  background: ${props => props.theme.colors.white};
+  color: ${props => props.theme.colors.khaki};
+  font-family: ${props => props.theme.fonts.title};
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  
+  &:hover {
+    background: ${props => props.theme.colors.greyDeep};
+  }
+  
+  &:active {
+    background: ${props => props.theme.colors.greyDeep};
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  @media ${DeviceQuery.tablet} {
+    margin: 0;
+  }
+
+  @media ${DeviceQuery.desktop} {
+    width: 413px;
+    font-size: 27px;
+    padding: 34px 50px;
+  }
+`

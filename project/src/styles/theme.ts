@@ -18,6 +18,7 @@ export const baseTheme: IBaseTheme = {
         black: '#000000',
         blackText: '#1E1F1B',
         grey: '#D1D1D1',
+        greyDeep: '#CBCBCB',
         greyDark: '#9F9F9F',
         greyLight: '#D9D9D9',
     },

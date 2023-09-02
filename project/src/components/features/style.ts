@@ -30,6 +30,11 @@ export const Title = styled.h3`
         line-height: 0.56px;
         margin-bottom: 46px;
     }
+    @media ${DeviceQuery.desktop} {
+        font-size: 36px;
+        line-height: 0.72px;
+        margin-bottom: 60px;
+    }
 `
 export const Icons = styled.ul`
     margin: 0 auto;
@@ -43,6 +48,9 @@ export const Icons = styled.ul`
         align-items: flex-start;
         column-gap: 140px;
         row-gap: 19px;
+    }
+    @media ${DeviceQuery.desktop} {
+        align-items: stretch;
     }
 `
 export const Icon = styled.li`
@@ -60,7 +68,12 @@ export const Icon = styled.li`
     }
 
     @media ${DeviceQuery.tablet} {
-        margin: 0%;
+        margin: 0;
+    }
+    @media ${DeviceQuery.desktop} {
+        width: 350px;
+        margin: 0;
+        padding: 27px 0;
     }
 `
 export const IconImg = styled.img`
@@ -71,11 +84,17 @@ export const IconCaption = styled.p`
     margin: 0;
     color: ${props => props.theme.colors.khaki};
     text-align: center;
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.2px;
     text-transform: uppercase;
+
+    @media ${DeviceQuery.desktop} {
+        width: 248px;
+        margin: 0 auto;
+        margin-top: 32px;
+    }
 `

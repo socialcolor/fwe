@@ -16,6 +16,7 @@ export interface IBaseTheme {
         black: string,
         blackText: string,
         grey: string,
+        greyDeep: string,
         greyDark: string,
         greyLight: string, 
     },

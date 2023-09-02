@@ -12,6 +12,12 @@ export const About = styled.section<{$height: string}>`
         width: 786px;
         margin: 0 auto;
     }
+
+    @media ${DeviceQuery.desktop} {
+        width: 1284px;
+        padding-top: 39px;
+        height: calc(${props => props.$height} - 734px + 50px);
+    }
 `
 export const Img = styled.img`
     display: block;
@@ -28,6 +34,13 @@ export const Img = styled.img`
         padding: 0;
         margin-left: -4px;
     }
+    @media ${DeviceQuery.tablet} {
+        width: 734px;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        margin-left: 0;
+    }
 `
 
 export const Description = styled.div`
@@ -41,6 +54,15 @@ export const Description = styled.div`
         z-index: 2;
         bottom: 214px;
         left: 91px;
+        margin: 0;
+        padding: 30px 57px 40px 60px;
+    }
+    @media ${DeviceQuery.desktop} {
+        width: 734px;
+        position: relative;
+        z-index: 2;
+        bottom: 760px;
+        left: 550px;
         margin: 0;
         padding: 30px 57px 40px 60px;
     }
@@ -67,6 +89,9 @@ export const Title = styled(T)`
 
     @media ${DeviceQuery.tablet} {
         font-size: 38px;
+    }
+    @media ${DeviceQuery.tablet} {
+        font-size: 50px;
     }
 `
 export const Text = styled.p`
@@ -99,5 +124,19 @@ export const Text = styled.p`
         &:nth-child(3) {
             margin: initial;
         }
+    }
+    @media ${DeviceQuery.desktop} {
+        width: 634px;
+        font-size: 28px;
+
+        &:nth-child(2) {
+        margin-bottom: 45px;
+        }
+        &:nth-child(3) {
+            margin: initial;
+        }
+        &:last-child {
+        margin-top: 45px;
+    }
     }
 `
