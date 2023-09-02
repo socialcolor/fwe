@@ -10,7 +10,6 @@ export default function AboutMe(): JSX.Element {
     }, [aboutRef])
 
     const img = () => {
-        console.log(window.innerWidth)
         if(window.innerWidth >= SizeDevice.mobile && window.innerWidth < SizeDevice.tablet) {
             return <S.Img src={'./img/about_emillie-mobile.jpg'} alt={'Эмилия'} width={268} height={328} />
         } 
