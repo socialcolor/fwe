@@ -4,6 +4,9 @@ import { Link as L } from 'react-router-dom';
 
 export const Footer = styled.footer`
     width: 100%;
+    @media ${DeviceQuery.desktop} {
+        background-color: ${({ theme }) => theme.colors.khakiDark};
+    }
 `
 export const Wrapper = styled.div`
     position: relative;
@@ -26,6 +29,8 @@ export const Wrapper = styled.div`
     }
     @media ${DeviceQuery.desktop} {
         min-width: 700px;
+        max-width: 1440px;
+        margin: auto;
         padding-left: 540px;
         padding-top: 25px;
         padding-bottom: 100px;

@@ -1,16 +1,20 @@
 import * as S from './style'
 import { FaqList } from '../../const';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 function Accrodion({question, answer}:{question: string, answer: string}):JSX.Element {
     const [state, setState] = useState(0); 
-    const clickHandler = (evt: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
-        state ? setState(0) :setState(evt.currentTarget.scrollHeight);
+    const QuestionRef = useRef<HTMLLIElement>(null); 
+    const clickHandler = () => {
+        if(QuestionRef.current) {
+            const Height:number = QuestionRef.current?.scrollHeight;
+            state ? setState(0) : setState(Height);
+        }
     }
 
     return (
-    <S.Question onClick={clickHandler}>
-        <S.wrapper>
+    <S.Question ref={QuestionRef}>
+        <S.wrapper onClick={clickHandler}>
             <S.Caption>{question}</S.Caption>
             <S.Icon>{state ? '-' : '+'}</S.Icon>
         </S.wrapper>

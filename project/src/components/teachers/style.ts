@@ -8,15 +8,28 @@ export const Teachers = styled.section`
     @media ${DeviceQuery.tablet} {
         max-width: 768px;
     }
+    @media ${DeviceQuery.desktop} {
+        max-width: 1440px;
+    }
 `
 export const Teacher = styled.div`
     width: 130px;
     height: auto;
-    `
+
+    @media ${DeviceQuery.desktop} {
+        width: 268px;
+        height: auto;
+    }
+`
 export const Circle = styled.img`
     width: 130px;
     height: 130px;
     border-radius: 50%;
+
+    @media ${DeviceQuery.desktop} {
+        width: 268px;
+        height: 268px;
+    }
 `
 export const Name = styled.p`
     color: ${props => props.theme.colors.khaki};
@@ -27,6 +40,10 @@ export const Name = styled.p`
     font-weight: 600;
     line-height: normal;
     margin: 0;
+
+    @media ${DeviceQuery.desktop} {
+        font-size: 20px;
+    }
 `
 export const Caption = styled.p`
     color: ${props => props.theme.colors.black};
@@ -37,4 +54,8 @@ export const Caption = styled.p`
     font-weight: 400;
     line-height: normal;
     margin-top: 5px;
+
+    @media ${DeviceQuery.desktop} {
+        font-size: 28px;
+    }
 `

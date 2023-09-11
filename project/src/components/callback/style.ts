@@ -6,6 +6,11 @@ export const Form = styled.form`
     padding-top: 23px;
     padding-bottom: 35px;
     background-color: ${({ theme }) => theme.colors.grey};
+
+    @media ${DeviceQuery.desktop} {
+        padding-top: 43px;
+        padding-bottom: 52px;
+    }
 `
 export const Title = styled(T)`
     margin: 0;
@@ -22,6 +27,11 @@ export const Title = styled(T)`
         width: 601px;
         margin: auto;
         font-size: 28px;
+    }
+    @media ${DeviceQuery.desktop} {
+        width: 976px;
+        margin: auto;
+        font-size: 48px;
     }
 `
 export const UpperOrangeText = styled.span`
@@ -44,6 +54,10 @@ export const Text = styled.p`
         width: 484px;
         font-size: 24px;
     }
+    @media ${DeviceQuery.desktop} {
+        width: 645px;
+        font-size: 32px;
+    }
 `
 export const Signature = styled.p`
     width: 311px;
@@ -63,6 +77,10 @@ export const Signature = styled.p`
         line-height: 28px;
         padding-bottom: 17px;
     }
+    @media ${DeviceQuery.desktop} {
+        width: 757px;
+        font-size: 24px;
+    }
 `
 export const MailLink = styled.a`
     color: ${({ theme }) => theme.colors.black};
@@ -72,6 +90,10 @@ export const MailLink = styled.a`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
+    @media ${DeviceQuery.desktop} {
+        font-size: 24px;
+    }
 `
 export const WrappersInput = styled.div`
     padding: 0;
@@ -86,6 +108,17 @@ export const WrappersInput = styled.div`
     @media ${DeviceQuery.tablet} {
         padding-top: 47px;
         padding-bottom: 18px;
+    }
+    @media ${DeviceQuery.desktop} {
+        width: 964px;
+        margin: auto;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 32px;
+        margin-top: 82px;
+        margin-bottom: 25px;
     }
 `
 
@@ -106,6 +139,12 @@ export const Input = styled.input`
     &::placeholder {
         text-transform: capitalize;
         opacity: .7;
+    }
+    
+    @media ${DeviceQuery.desktop} {
+        font-size: 24px;
+        width: 300px;
+        height: 60px;
     }
 `
 export const button = styled.button<{$color: string}>`
@@ -129,5 +168,10 @@ export const button = styled.button<{$color: string}>`
     }
     &:active {
         opacity: 0.9;
+    }
+
+    @media ${DeviceQuery.desktop} {
+        font-size: 27px;
+        padding: 34px 85px;
     }
 `

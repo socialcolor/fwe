@@ -18,7 +18,7 @@ export default function Callback({ question, id }: { question?: boolean, id?: st
                     <S.Input name={'tel'} type={'text'} placeholder={'Телефон'} />
                     <S.Input name={'email'} type={'email'} placeholder={'Email'} />
                 </S.WrappersInput>
-                <S.Signature>Или напишите нам в <S.MailLink href={'mailto:bonjour@frenchwithemilie.ru'}>Cлужбу поддержки</S.MailLink>. <br /> Мы свяжемся с вами в течение 30 минут с 10:00 до 20:00 (мск)</S.Signature>
+                <S.Signature>Или напишите нам в <S.MailLink href={'mailto:bonjour@frenchwithemilie.ru'}>службу поддержки</S.MailLink>. <br /> Мы свяжемся с вами в течение 30 минут с 10:00 до 20:00 (мск)</S.Signature>
                 <S.button $color={baseTheme.colors.khaki}>Отправить</S.button>
             </S.Form>
         )
@@ -32,7 +32,7 @@ export default function Callback({ question, id }: { question?: boolean, id?: st
                 <S.Input name={'tel'} type={'text'} placeholder={'Телефон'} />
                 <S.Input name={'email'} type={'email'} placeholder={'Email'} />
             </S.WrappersInput>
-            <S.Signature>Или напишите нам в <S.MailLink href={'mailto:bonjour@frenchwithemilie.ru'}>Cлужбу поддержки</S.MailLink>. <br /> Мы свяжемся с вами в течение 30 минут с 10:00 до 20:00 (мск)</S.Signature>
+            <S.Signature>Или напишите нам в <S.MailLink href={'mailto:bonjour@frenchwithemilie.ru'}>службу поддержки</S.MailLink>. <br /> Мы свяжемся с вами в течение 30 минут с 10:00 до 20:00 (мск)</S.Signature>
             <S.button  $color={baseTheme.colors.yellowLight}>Отправить</S.button>
         </S.Form>
     )

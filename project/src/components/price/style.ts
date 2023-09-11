@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 import { DeviceQuery } from '../../styles/device-query'
 
+export const PriceSection = styled.section`
+    max-width: 1440px;
+    margin: auto;
+`
 export const Price = styled.div`
     font-family: ${props => props.theme.fonts.title};
     width: 277px;
@@ -81,6 +85,10 @@ export const Body = styled.div`
 export const PriceList = styled.ul`
     margin: auto;
     padding: 0;
+
+    @media ${DeviceQuery.desktop} {
+        list-style-type: none;
+    }
 `
 export const PriceItem = styled.li`
     font-weight: 500;

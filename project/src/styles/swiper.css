@@ -31,3 +31,14 @@
 .reviews  [class^="swiper-button-"] {
   color: #ffffff;
 }
+
+@media screen and (min-width: 1440px) {
+  .swiperPrice {
+    padding: 0 45px;
+  }
+
+  .swiperTeacher .swiper-wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}

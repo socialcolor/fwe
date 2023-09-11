@@ -10,27 +10,25 @@ import "swiper/css/pagination";
 import '../../styles/swiper.css';
 
 export default function Teachers(): JSX.Element {
+    const TeacherLengh:number = TeachersList.length < 3 ? TeachersList.length : 3;
     return (
         <S.Teachers id={'teachers'}>
             <Title as={'h3'}>наши преподаватели</Title>
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 navigation={true}
-                pagination={{
-                    clickable: true
-                }}
-                autoplay={{
-                    delay: 2500,
-                }
-                  }
+                pagination={{clickable: true}}
+                autoplay={{delay: 2500}}
                 loop={true}
+                slidesPerView={'auto'}
                 breakpoints={{
                     320: {
                         slidesPerView: 'auto'
                     },
                     768: {
-                        slidesPerView: 3,
-                        }
+                        slidesPerView: TeacherLengh,
+                        spaceBetween: 0,
+                    }
                 }}
             >
                 {TeachersList.map(slide => (

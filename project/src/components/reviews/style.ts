@@ -17,6 +17,12 @@ export const Wrapper = styled.div`
         max-width: 768px;
         padding-bottom: 30px;
     }
+    @media ${DeviceQuery.tablet} {
+        max-width: 1000px; 
+        padding-bottom: 30px;
+    }
+`
+export const ReviewWrapper = styled.div`
 `
 export const Title = styled(T)`
     color: ${props => props.theme.colors.white};
@@ -24,7 +30,15 @@ export const Title = styled(T)`
 export const Review = styled.div`
     width: 100%;
     height: auto;
-    `
+
+    @media ${DeviceQuery.desktop} {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+`
 export const Circle = styled.img`
     width: 130px;
     height: 130px;

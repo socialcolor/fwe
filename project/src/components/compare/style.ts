@@ -5,6 +5,11 @@ export const Compare = styled.section`
     width: 100%;
     height: auto;
 
+    @media ${DeviceQuery.desktop} {
+        width: 960px;
+        margin: auto;
+    }
+
 `
 export const Title = styled.h3`
     font-family: ${props => props.theme.fonts.title};
@@ -27,8 +32,9 @@ export const Title = styled.h3`
     }
 
     @media ${DeviceQuery.desktop} {
-        font-size: 36px;
+        font-size: 39px;
         line-height: 44px;
+        margin-top: 0;
     }
 
 `
@@ -47,6 +53,9 @@ export const Text = styled.p`
         line-height: 44px;
         margin-top: 0;
         margin-bottom: 37px;
+    }
+    @media ${DeviceQuery.desktop} {
+        font-size: 34px;
     }
 `
 export const Table = styled.div`
@@ -70,6 +79,11 @@ export const TableWrapper = styled.div`
         max-width: 768px;
         padding: 0 39px;
     }
+    @media ${DeviceQuery.desktop} {
+        width: 100%;
+        max-width: 960px;
+        padding: 0;
+    }
 `
 export const Row = styled.div`
     display: flex;
@@ -81,7 +95,7 @@ export const Row = styled.div`
         justify-content: space-between;
         align-items: stretch;
     }
-` 
+`
 export const TableTitle = styled.h4`
     width: 50%;
     text-align: center;
@@ -112,7 +126,21 @@ export const TableTitle = styled.h4`
 
         &:first-child{
         border-right: none;
+        }
     }
+    @media ${DeviceQuery.desktop} {
+        width: 337px;
+        max-width: 337px;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 31px;
+        color: ${props => props.theme.colors.khakiDark};
+        font-size: 26px;
+        font-weight: 500;
+
+        &:first-child{
+        border-right: none;
+        }
     }
 `
 export const TableText = styled.p`
@@ -159,5 +187,9 @@ export const TableText = styled.p`
             padding: 11px 36px;
             background-color: ${props => props.theme.colors.orangeMiddle};
         }
+    }
+
+    @media ${DeviceQuery.desktop} {
+        font-size: 30px;
     }
 `

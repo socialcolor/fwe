@@ -13,12 +13,19 @@ export const Faq = styled.section`
         max-width: 768px;
         padding: 0;
     }
+    @media ${DeviceQuery.desktop} {
+        max-width: 1212px;
+    }
 `
 export const Title = styled(T)`
     @media ${DeviceQuery.tablet} {
         font-size: 28px;
         margin-top: 20px;
         margin-bottom: 10px;
+    }
+    @media ${DeviceQuery.desktop} {
+        margin-top: 90px;
+        font-size: 39px;
     }
 `
 export const Text = styled.p`
@@ -33,6 +40,9 @@ export const Text = styled.p`
     @media ${DeviceQuery.tablet} {
         font-size: 24px;
         margin-bottom: 62px;
+    }
+    @media ${DeviceQuery.desktop} {
+        font-size: 30px;
     }
 `
 
@@ -54,6 +64,10 @@ export const Question = styled.li`
         padding-left: 39px;
         padding-right: 16px;
     }
+    @media ${DeviceQuery.desktop} {
+        padding-left: 0;
+        padding-right: 0;
+    }
 `
 export const wrapper = styled.div`
     margin: 0 auto;
@@ -66,6 +80,10 @@ export const wrapper = styled.div`
 
     @media ${DeviceQuery.tablet} {
         max-width: 768px;
+    }
+    @media ${DeviceQuery.desktop} {
+        max-width: 1440px;
+        cursor: pointer;
     }
 `
 export const Caption = styled.h4`
@@ -82,6 +100,9 @@ export const Caption = styled.h4`
     @media ${DeviceQuery.tablet} {
         width: 100%;
     }
+    @media ${DeviceQuery.tablet} {
+        font-size: 24px;
+    }
 `
 export const Answer = styled.p<{ $height?: number; }>`
     max-width: 375px;
@@ -96,6 +117,9 @@ export const Answer = styled.p<{ $height?: number; }>`
 
     @media ${DeviceQuery.tablet} {
         max-width: 100%;
+    }
+    @media ${DeviceQuery.desktop} {
+        font-size: 20px;
     }
 `
 export const Icon = styled.p`

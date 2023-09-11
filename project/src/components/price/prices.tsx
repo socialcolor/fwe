@@ -22,11 +22,11 @@ export default function Prices(): JSX.Element {
     }
 
     return (
-        <section id={'price'}>
+        <S.PriceSection id={'price'}>
             <Title as='h3'>Наши Тарифы</Title>
-            <Swiper
+            <Swiper className='swiperPrice'
                 modules={[Navigation, Pagination]}
-                navigation={window.innerWidth >= 768 ? false : true}
+                navigation={true}
                 pagination={true}
                 breakpoints={{
                     320: {
@@ -44,6 +44,14 @@ export default function Prices(): JSX.Element {
                         initialSlide: 1,
                         spaceBetween: 0,
                         navigation: false,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            type: 'bullets',
+                        },
+                    },
+                    1440: {
+                        slidesPerView: 3,
+                        spaceBetween: 50,
                         pagination: {
                             el: '.swiper-pagination',
                             type: 'bullets',
@@ -71,6 +79,6 @@ export default function Prices(): JSX.Element {
                 ))}
             </Swiper>
             {showModal && createPortal(<Modal onClose={onModalhandler}></Modal>, document.body)}
-        </section>
+        </S.PriceSection>
     )
 }

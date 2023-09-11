@@ -21,13 +21,16 @@ export default function Reviews(): JSX.Element {
                     }}
                     slidesPerView={'auto'}
                     loop={true}
+                    className='swiperTeacher'
                 >
                     {ReviewsList.map(slide => (
                         <SwiperSlide key={slide.name}>
                             <S.Review>
-                                <S.Circle src={slide.img} />
-                                <S.Name>{slide.name}</S.Name>
-                                <S.Caption>{slide.title}</S.Caption>
+                                <S.ReviewWrapper>
+                                    <S.Circle src={slide.img} />
+                                    <S.Name>{slide.name}</S.Name>
+                                </S.ReviewWrapper>
+                                <S.Caption>{slide.text}</S.Caption>
                             </S.Review>
                         </SwiperSlide>
                     )

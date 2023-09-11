@@ -130,28 +130,23 @@ export const TeachersList = [
     img: './img/teachers/larisa-levanov.png',
     title: 'Преподаватель и носитель языка',
   },
-  {
-    name: 'Анастасия Москвина',
-    img: './img/teachers/anastasia-moskvina.jpg',
-    title: 'Преподаватель и носитель языка',
-  }
 ];
 
 export const ReviewsList = [
   {
     name: 'Ученик 1',
     img: './img/teachers/Ellipse6.jpg',
-    title: 'Lorem ipsum dolor sit amet consectetur. Accumsan vulputate fames eget sed placerat quis. Hendrerit vitae nunc faucibus amet. Odio tincidunt eget ut lacus quam. Odio tristique risus sodales turpis nec turpis duis fermentum.',
+    text: 'Lorem ipsum dolor sit amet consectetur. Accumsan vulputate fames eget sed placerat quis. Hendrerit vitae nunc faucibus amet. Odio tincidunt eget ut lacus quam. Odio tristique risus sodales turpis nec turpis duis fermentum.',
   },
   {
     name: 'Ученик 2',
     img: './img/teachers/Ellipse7.jpg',
-    title: 'Lorem ipsum dolor sit amet consectetur. Accumsan vulputate fames eget sed placerat quis. Hendrerit vitae nunc faucibus amet. Odio tincidunt eget ut lacus quam. Odio tristique risus sodales turpis nec turpis duis fermentum.',
+    text: 'Lorem ipsum dolor sit amet consectetur. Accumsan vulputate fames eget sed placerat quis. Hendrerit vitae nunc faucibus amet. Odio tincidunt eget ut lacus quam. Odio tristique risus sodales turpis nec turpis duis fermentum.',
   },
   {
     name: 'Ученик 3',
     img: './img/teachers/Ellipse8.jpg',
-    title: 'Lorem ipsum dolor sit amet consectetur. Accumsan vulputate fames eget sed placerat quis. Hendrerit vitae nunc faucibus amet. Odio tincidunt eget ut lacus quam. Odio tristique risus sodales turpis nec turpis duis fermentum.',
+    text: 'Lorem ipsum dolor sit amet consectetur. Accumsan vulputate fames eget sed placerat quis. Hendrerit vitae nunc faucibus amet. Odio tincidunt eget ut lacus quam. Odio tristique risus sodales turpis nec turpis duis fermentum.',
   }
 ];
 

@@ -12,15 +12,24 @@ export const Platform = styled.section`
     @media ${DeviceQuery.tablet} {
         padding: 23px 48px 76px 48px;
     }
+    @media ${DeviceQuery.desktop} {
+        width: 100%;
+        padding: 50px 125px 98px 125px;
+    }
 `
 export const Wrapper = styled.div`
     max-width: 375px;
     margin: auto;
 
     @media ${DeviceQuery.tablet} {
+        width: 665px;
         max-width: 665px;
         position: relative;
         z-index: 1;
+    }
+    @media ${DeviceQuery.desktop} {
+        width: 1180px;
+        max-width: 1180px;
     }
 `
 export const Title = styled.h3`
@@ -40,6 +49,11 @@ export const Title = styled.h3`
         width: 563px;
         font-size: 28px;
         letter-spacing: 0.56px;
+    }
+    @media ${DeviceQuery.tablet} {
+        width: 1093px;
+        font-size: 36px;
+        letter-spacing: 0.72px;
     }
 `
 export const Cirle = styled.p`
@@ -84,18 +98,42 @@ export const Cirle = styled.p`
             z-index: -1;
         }
     }
+    @media ${DeviceQuery.desktop} {
+        position: absolute;
+        width: 291px;
+        height: 179px;
+        top: 100px;
+        right: 250px;
+
+        &::before {
+            width: 363px;
+            height: 116px;
+            background-image: url('./img/platform_arrow-down-desktop.svg');
+            top: 42px;
+            left: -307px;
+            z-index: -1;
+        }
+    }
     `
 export const CircleText = styled.span`
     width: 162px;
     color: ${props => props.theme.colors.khaki};
     text-align: center;
-    font-family: 'Inter', sans-serif;
+    font-family: ${props => props.theme.fonts.title};
     font-size: 17px;
     font-style: normal;
     font-weight: 500;
     line-height: 27px;
     letter-spacing: 0.68px;
     text-transform: uppercase;
+
+    @media ${DeviceQuery.desktop} {
+        width: 231px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 27px;
+        letter-spacing: 0.72px;
+    }
 `
 export const PlatformIndexImg = styled.div`
     position: relative;
@@ -115,6 +153,14 @@ export const PlatformIndexImg = styled.div`
         background-image: url('img/platform_index-tablet.jpg');
         margin: 0;
         margin-top: 91px;
+    }
+    @media ${DeviceQuery.desktop} {
+        z-index: -2;
+        width: 512px;
+        height: 594px;
+        background-image: url('img/platform_index-desktop.jpg');
+        margin: 0;
+        margin-top: 51px;
     }
 `
 export const EllipseRight = styled.p`
@@ -154,6 +200,20 @@ export const EllipseRight = styled.p`
             left: -130px;
             top: -73px;
             transform: scale(-1, 1) rotate(85deg);
+        }
+    }
+    @media ${DeviceQuery.desktop} {
+        position: absolute;
+        width: 246px;
+        height: 142px;
+        margin: 0;
+        left: 550px;
+        bottom: 0px;
+
+        &::before {
+            left: -80px;
+            top: -150px;
+            transform: rotate(-15deg);
         }
     }
 ` 
@@ -203,6 +263,18 @@ export const EllipseLeft = styled(EllipseRight)`
             transform: rotate(270deg);
         }
     }
+    @media ${DeviceQuery.desktop} {
+        position: absolute;
+        left: initial;
+        right: 0;
+        bottom: 290px;
+        
+        &::before {
+            top: 110px;
+            left: 0;
+            transform: rotate(0deg);
+        }
+    }
 `
 export const PlatformScheduleImg = styled.div`
     position: relative;
@@ -222,5 +294,14 @@ export const PlatformScheduleImg = styled.div`
         margin: 0;
         margin-left: auto;
         margin-right: 28px;
+    }
+    @media ${DeviceQuery.desktop} {
+        position: absolute;
+        width: 355px;
+        height: 203px;
+        margin: 0;
+        right: 0;
+        bottom: 10px;
+        background-image: url('./img/platform_schedule-tablet.jpg');
     }
 `
