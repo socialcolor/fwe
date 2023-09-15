@@ -15,7 +15,7 @@ import Reviews from '../../components/reviews';
 import Faq from '../../components/faq';
 
 export default function MainScreen(): JSX.Element {
-useEffect(() => {
+    useEffect(() => {
         document.title = 'Онлайн Школа Французского. French withe Emillie'
     }, [])
 
@@ -30,12 +30,12 @@ useEffect(() => {
                 <Platform />
                 <Prices />
                 <Compare />
-                <Callback id={'trial'}/>
+                <Callback id={'trial'} />
                 <Teachers />
                 <Reviews />
                 <Faq />
-                <Callback question/>
-             </Main>
+                <Callback question />
+            </Main>
             <Footer />
         </React.Fragment>
     )

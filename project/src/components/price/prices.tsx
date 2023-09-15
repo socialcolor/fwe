@@ -1,8 +1,6 @@
-import * as S from './style'
-import Title from '../title'
-import { useState } from 'react';
-import { createPortal } from 'react-dom';
-import { PriceLists } from '../../const'
+import * as S from './style';
+import Title from '../title';
+import { PriceLists } from '../../const';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from "swiper";
 
@@ -10,17 +8,9 @@ import 'swiper/css';
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import '../../styles/swiper.css';
-import Modal from '../modal';
-
+import { PriceItem } from '../price-item';
 
 export default function Prices(): JSX.Element {
-    const [showModal, setShowModal] = useState(false);
-
-    const onModalhandler = (evt: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-        evt.preventDefault();
-        setShowModal(!showModal);
-    }
-
     return (
         <S.PriceSection id={'price'}>
             <Title as='h3'>Наши Тарифы</Title>
@@ -60,25 +50,11 @@ export default function Prices(): JSX.Element {
                 }}
             >
                 {PriceLists.map(slide => (
-                    <SwiperSlide key={slide.name}>
-                        <S.Price>
-                            <S.Header>
-                                <S.PriceIcon src={slide.iconUrl} />
-                                <S.Title>{slide.name}</S.Title>
-                            </S.Header>
-                            <S.Body>
-                                <S.PriceList>
-                                    {slide.tarifs.map(tarif => (
-                                        <S.PriceItem key={String(tarif.duration) + String(tarif.price)}>{tarif.duration} мин - {tarif.price} руб.</S.PriceItem>
-                                    ))}
-                                </S.PriceList>
-                                <S.Button onClick={onModalhandler}>записаться на урок</S.Button>
-                            </S.Body>
-                        </S.Price>
+                    <SwiperSlide>
+                        <PriceItem name={slide.name} iconUrl={slide.iconUrl} tarifs={slide.tarifs} />
                     </SwiperSlide>
                 ))}
             </Swiper>
-            {showModal && createPortal(<Modal onClose={onModalhandler}></Modal>, document.body)}
         </S.PriceSection>
     )
 }
