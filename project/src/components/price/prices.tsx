@@ -50,7 +50,7 @@ export default function Prices(): JSX.Element {
                 }}
             >
                 {PriceLists.map(slide => (
-                    <SwiperSlide>
+                    <SwiperSlide key={slide.name}>
                         <PriceItem name={slide.name} iconUrl={slide.iconUrl} tarifs={slide.tarifs} />
                     </SwiperSlide>
                 ))}

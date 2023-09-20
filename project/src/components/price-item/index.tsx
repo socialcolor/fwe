@@ -34,7 +34,7 @@ export function PriceItem({name, iconUrl, tarifs}: PriceItemType): JSX.Element {
                     </S.PriceList>
                     <S.Button onClick={onCallbackHandler}>записаться на урок</S.Button>
                 </S.Body>
-                {showCallBackModal && <Modal onClose={onCallbackHandler}><Callback price/></Modal>}
+                {showCallBackModal && <Modal onClose={onCallbackHandler}><Callback name={'Пробный урок'} price/></Modal>}
             </S.Price>
     )
 }

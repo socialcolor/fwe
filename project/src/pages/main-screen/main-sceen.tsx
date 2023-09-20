@@ -30,11 +30,11 @@ export default function MainScreen(): JSX.Element {
                 <Platform />
                 <Prices />
                 <Compare />
-                <Callback id={'trial'} />
+                <Callback id={'trial'} name={'Пробный урок'} />
                 <Teachers />
                 <Reviews />
                 <Faq />
-                <Callback question />
+                <Callback question name={'Консультация'}/>
             </Main>
             <Footer />
         </React.Fragment>

@@ -1,5 +1,5 @@
-import { MenuType } from "./type/menu";
-import { FaqType } from "./type/faq";
+import { MenuType } from "./types/menu";
+import { FaqType } from "./types/faq";
 
 export const enum AppRoute {
   Root = '/',
@@ -8,26 +8,6 @@ export const enum AppRoute {
   Rules = '/rules',
   Other = '*',
 }
-
-
-// export const Menu: MenuType = {
-//   price: {
-//     name: 'Цены',
-//     link: `${AppRoute.Root}#price`,
-//   },
-//   rules: {
-//     name: 'Правила',
-//     link: `${AppRoute.Rules}`,
-//   },
-//   offer: {
-//     name: 'Оферта',
-//     link: AppRoute.Contract,
-//   },
-//   contacts: {
-//     name: 'Контакты',
-//     link: `{AppRoute.Root}#contacts`,
-//   },
-// }
 
 export const Menu: MenuType = {
   about: {
@@ -168,3 +148,8 @@ export const FaqList:FaqType = [
     answer: 'Lorem ipsum dolor sit amet consectetur. Accumsan vulputate fames eget sed placerat quis. Hendrerit vitae nunc faucibus amet. Odio tincidunt eget ut lacus quam. Odio tristique risus sodales turpis nec turpis duis fermentum.'
   },
 ]
+
+export const Endpoints = {
+  // sendForm: 'https://frenchwithemilie.ru/api/createDeal/'
+  sendForm: 'http://localhost:3000/api/createDeal/'
+}

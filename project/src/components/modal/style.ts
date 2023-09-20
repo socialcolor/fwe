@@ -9,7 +9,7 @@ export const Modal = styled.div`
   top: 0; 
   right: 0; 
   bottom: 0;
-  overflow: scroll;
+  overflow: auto;
   z-index: 99;
   `
 
@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
   display: block;
   min-width: 250px;
   min-height: 250px;
-  max-width: 80%;
+  max-width: 100%;
   max-height: 100%;
   position: absolute;
   left: 50%;
@@ -30,7 +30,7 @@ export const Wrapper = styled.div`
   font-style: normal;
   font-size: 20px;
   color: ${props => props.theme.colors.blackText};
-  overflow: hidden;
+  overflow: auto;
   border-radius: 20px;
 `
 export const Overlay = styled.div`

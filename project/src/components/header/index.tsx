@@ -28,8 +28,8 @@ export default function Header({ background = true }: { background?: boolean }):
           <S.Button onClick={onCallbackHandler}>Записаться на урок</S.Button>
           <S.Button onClick={onQuestionHandler}>Узнать подробнее</S.Button>
         </S.ButtonWrapper>
-        {showCallBackModal && <Modal onClose={onCallbackHandler}><Callback /></Modal>}
-        {showQuestionkModal && <Modal onClose={onQuestionHandler}><Callback question /></Modal>}
+        {showCallBackModal && <Modal onClose={onCallbackHandler}><Callback name={'Пробный урок'}/></Modal>}
+        {showQuestionkModal && <Modal onClose={onQuestionHandler}><Callback name={'Консультация'} question /></Modal>}
       </S.Header>
     )
   }

@@ -4,16 +4,20 @@ import App from './components/app/App';
 import browserHistory from './browser-history';
 import HistoryRouter from './components/history-router/history-router';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <HistoryRouter history={browserHistory}>
-      <App />
-    </HistoryRouter>
-  </React.StrictMode>
+  <Provider store={store}>
+    <React.StrictMode>
+      <HistoryRouter history={browserHistory}>
+        <App />
+      </HistoryRouter>
+    </React.StrictMode>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
