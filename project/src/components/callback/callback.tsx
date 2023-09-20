@@ -1,12 +1,12 @@
 import * as S from './style';
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import { baseTheme } from '../../styles/theme';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { sendForm } from '../../store/asyncActions';
-import { getSuccesSendForm } from '../../store/selectors';
+import { getDisabledForm, getErrorSendForm, getSuccesSendForm } from '../../store/selectors';
+import { changeErorFormStatus, changeSendingFormStatus } from '../../store/dataSlice';
 
 export default function Callback({ question, price, id, name }: { question?: boolean, price?: boolean, id?: string, name: string }): JSX.Element {
-    const [succesSend, setSuccesSend] = useState(false);
     const [formState, setFormState] = useState({
         formName: name,
         name: '',
@@ -14,13 +14,22 @@ export default function Callback({ question, price, id, name }: { question?: boo
         email: '',
     });
 
+    useEffect(() => {
+        dispatch(changeSendingFormStatus(false))
+        dispatch(changeErorFormStatus(false))
+    }, [])
+
     const dispatch = useAppDispatch();
+    const disabledForm = useAppSelector(getDisabledForm());
     const successSendForm = useAppSelector(getSuccesSendForm());
+    const errorSendForm = useAppSelector(getErrorSendForm());
     
+
     const onFormSend = (evt: FormEvent<HTMLFormElement>): void => {
         evt.preventDefault();
         dispatch(sendForm(formState));
-        setSuccesSend(successSendForm);
+        console.log('succes', successSendForm)
+        console.log('error', errorSendForm)
     };
 
     return (
@@ -39,12 +48,14 @@ export default function Callback({ question, price, id, name }: { question?: boo
                 </>
             }
             <S.WrappersInput>
-                <S.Input required name={'name'} type={'text'} placeholder={'Имя*'} onInput={(evt) => setFormState({ ...formState, name: evt.currentTarget.value })} />
-                <S.Input required name={'tel'} type={'text'} placeholder={'Телефон*'} onInput={(evt) => setFormState({ ...formState, phone: evt.currentTarget.value })} />
-                <S.Input required name={'email'} type={'email'} placeholder={'Email*'} onInput={(evt) => setFormState({ ...formState, email: evt.currentTarget.value })} />
+                <S.Input disabled={disabledForm} required name={'name'} type={'text'} placeholder={'Имя*'} onInput={(evt) => setFormState({ ...formState, name: evt.currentTarget.value })} />
+                <S.Input disabled={disabledForm} required name={'tel'} type={'text'} placeholder={'Телефон*'} onInput={(evt) => setFormState({ ...formState, phone: evt.currentTarget.value })} />
+                <S.Input disabled={disabledForm} required name={'email'} type={'email'} placeholder={'Email*'} onInput={(evt) => setFormState({ ...formState, email: evt.currentTarget.value })} />
             </S.WrappersInput>
             <S.Signature>Или напишите нам в <S.MailLink href={'mailto:bonjour@frenchwithemilie.ru'}>службу поддержки</S.MailLink>. <br /> Мы свяжемся с вами в течение 30 минут с 10:00 до 20:00 (мск)</S.Signature>
-            {succesSend ? <S.Text>Заявка успешно отправлена. С вами свяжуться в ближайшее время</S.Text> : <S.button $color={question || price ? baseTheme.colors.khaki : baseTheme.colors.yellowLight}>Отправить</S.button>}
+            {successSendForm === true && <S.Text>Заявка успешно отправлена. С вами свяжуться в ближайшее время</S.Text>}
+            {errorSendForm === true && <S.Text>Ошибка при отправке заявки. Попробуйте снова.</S.Text>}
+            {successSendForm !== true && <S.button $color={question || price ? baseTheme.colors.khaki : baseTheme.colors.yellowLight} disabled={disabledForm}>Отправить</S.button>}
         </S.Form>
     )
 }

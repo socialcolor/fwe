@@ -13,13 +13,15 @@ const dataSlice = createSlice({
     name: 'data',
     initialState,
     reducers: {
-        changeFormSendingSucces: (state) => {
-            state.FormSendingSucces = !state.FormSendingSucces
+        changeSendingFormStatus: (state, action) => {
+            state.FormSendingSucces = action.payload
+        },
+        changeErorFormStatus: (state, action) => {
+            state.FormSendingError = action.payload
         }
     },
     extraReducers: (builder) => {
         builder.addCase(sendForm.pending, (state) => {
-            state.FormSendingSucces = false;
             state.disabledForm = true;
         })
         builder.addCase(sendForm.fulfilled, (state) => {
@@ -29,12 +31,13 @@ const dataSlice = createSlice({
         })
         builder.addCase(sendForm.rejected, (state) => {
             state.disabledForm = false;
+            state.FormSendingSucces = false;
             state.FormSendingError = true;
         })
     }
 })
 
 
-export const { changeFormSendingSucces: changeFormSendingStatus } = dataSlice.actions;
+export const { changeSendingFormStatus, changeErorFormStatus } = dataSlice.actions;
 
 export default dataSlice.reducer;

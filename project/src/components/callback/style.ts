@@ -141,6 +141,10 @@ export const Input = styled.input`
         opacity: .7;
     }
     
+    &:disabled {
+        opacity: 0.5;
+    }
+    
     @media ${DeviceQuery.desktop} {
         font-size: 24px;
         width: 300px;
@@ -169,7 +173,9 @@ export const button = styled.button<{$color: string}>`
     &:active {
         opacity: 0.9;
     }
-
+    &:disabled {
+        opacity: 0.5;
+    }
     @media ${DeviceQuery.desktop} {
         font-size: 27px;
         padding: 34px 85px;
