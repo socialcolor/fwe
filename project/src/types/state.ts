@@ -7,6 +7,7 @@ export type Data = {
 }
 
 export type Form = {
+    formName: string,
     name: string,
     email: string,
     phone: string,

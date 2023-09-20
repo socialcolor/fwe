@@ -5,8 +5,9 @@ import { Form } from '../types/state';
 
 export const sendForm = createAsyncThunk(
     'data/SendForm',
-    async ({name, email, phone}:Form) => {
+    async ({formName, name, email, phone}:Form) => {
         const { data } = await axios.post(Endpoints.sendForm, {
+            formName: formName,
             name: name,
             email: email,
             phone: phone,
