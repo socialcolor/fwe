@@ -150,5 +150,6 @@ export const FaqList:FaqType = [
 ]
 
 export const Endpoints = {
-  sendForm: 'https://frenchwithemilie.ru/api/createDeal/'
+  // sendForm: 'https://frenchwithemilie.ru/api/createDeal/'
+  sendForm: 'http://localhost:3000/api/createDeal/'
 }

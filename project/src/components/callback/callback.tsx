@@ -7,17 +7,13 @@ import { getDisabledForm, getErrorSendForm, getSuccesSendForm } from '../../stor
 import { changeErorFormStatus, changeSendingFormStatus } from '../../store/dataSlice';
 
 export default function Callback({ question, price, id, name }: { question?: boolean, price?: boolean, id?: string, name: string }): JSX.Element {
+    const [sendState, setSendState] = useState(false);
     const [formState, setFormState] = useState({
         formName: name,
         name: '',
         phone: '',
         email: '',
     });
-
-    useEffect(() => {
-        dispatch(changeSendingFormStatus(false))
-        dispatch(changeErorFormStatus(false))
-    }, [])
 
     const dispatch = useAppDispatch();
     const disabledForm = useAppSelector(getDisabledForm());
@@ -28,8 +24,7 @@ export default function Callback({ question, price, id, name }: { question?: boo
     const onFormSend = (evt: FormEvent<HTMLFormElement>): void => {
         evt.preventDefault();
         dispatch(sendForm(formState));
-        console.log('succes', successSendForm)
-        console.log('error', errorSendForm)
+        setSendState(true);
     };
 
     return (
@@ -53,9 +48,9 @@ export default function Callback({ question, price, id, name }: { question?: boo
                 <S.Input disabled={disabledForm} required name={'email'} type={'email'} placeholder={'Email*'} onInput={(evt) => setFormState({ ...formState, email: evt.currentTarget.value })} />
             </S.WrappersInput>
             <S.Signature>Или напишите нам в <S.MailLink href={'mailto:bonjour@frenchwithemilie.ru'}>службу поддержки</S.MailLink>. <br /> Мы свяжемся с вами в течение 30 минут с 10:00 до 20:00 (мск)</S.Signature>
-            {successSendForm === true && <S.Text>Заявка успешно отправлена. С вами свяжуться в ближайшее время</S.Text>}
-            {errorSendForm === true && <S.Text>Ошибка при отправке заявки. Попробуйте снова.</S.Text>}
-            {successSendForm !== true && <S.button $color={question || price ? baseTheme.colors.khaki : baseTheme.colors.yellowLight} disabled={disabledForm}>Отправить</S.button>}
+            {successSendForm && sendState && <S.Text>Заявка успешно отправлена. С вами свяжуться в ближайшее время</S.Text>}
+            {errorSendForm && sendState && <S.Text>Ошибка при отправке заявки. Попробуйте снова.</S.Text>}
+            <S.button $color={question || price ? baseTheme.colors.khaki : baseTheme.colors.yellowLight} disabled={disabledForm}>Отправить</S.button>
         </S.Form>
     )
 }

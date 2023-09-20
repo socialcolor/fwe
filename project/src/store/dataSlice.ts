@@ -23,15 +23,15 @@ const dataSlice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(sendForm.pending, (state) => {
             state.disabledForm = true;
+            state.FormSendingSucces = false;
+            state.FormSendingError = false;
         })
         builder.addCase(sendForm.fulfilled, (state) => {
             state.disabledForm = false;
             state.FormSendingSucces = true;
-            state.FormSendingError = false;
         })
         builder.addCase(sendForm.rejected, (state) => {
             state.disabledForm = false;
-            state.FormSendingSucces = false;
             state.FormSendingError = true;
         })
     }
