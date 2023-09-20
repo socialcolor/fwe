@@ -1,5 +1,5 @@
-import { DeviceQueryType } from "../type/device-query"
-import { SizeDeviceType } from "../type/size-device"
+import { DeviceQueryType } from "../types/device-query"
+import { SizeDeviceType } from "../types/size-device"
 
 export const SizeDevice:SizeDeviceType = {
     mobile: 320,
