@@ -1,10 +1,9 @@
 import * as S from './style';
-import { FormEvent, useEffect, useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { baseTheme } from '../../styles/theme';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { sendForm } from '../../store/asyncActions';
 import { getDisabledForm, getErrorSendForm, getSuccesSendForm } from '../../store/selectors';
-import { changeErorFormStatus, changeSendingFormStatus } from '../../store/dataSlice';
 
 export default function Callback({ question, price, id, name }: { question?: boolean, price?: boolean, id?: string, name: string }): JSX.Element {
     const [sendState, setSendState] = useState(false);

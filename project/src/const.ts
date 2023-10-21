@@ -104,12 +104,7 @@ export const TeachersList = [
     name: 'Эмилия Леонович',
     img: './img/teachers/emilia-leonovich.png',
     title: 'Преподаватель и носитель языка',
-  },
-  {
-    name: 'Лариса Леванова',
-    img: './img/teachers/larisa-levanov.png',
-    title: 'Преподаватель и носитель языка',
-  },
+  }
 ];
 
 export const ReviewsList = [
