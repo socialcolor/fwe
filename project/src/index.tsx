@@ -12,11 +12,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <Provider store={store}>
-    <React.StrictMode>
       <HistoryRouter history={browserHistory}>
         <App />
       </HistoryRouter>
-    </React.StrictMode>
   </Provider>
 );
 

@@ -27,7 +27,7 @@ export default function Callback({ question, price, id, name }: { question?: boo
     };
 
     return (
-        <S.Form id={id} name={name} method={"post"} action={'api/callback'} onSubmit={onFormSend}>
+        <S.Form id={id} name={name} method={"post"} action={''} onSubmit={onFormSend}>
             {question &&
                 <>
                     <S.Title as={'h3'}>Остались вопросы?</S.Title>
